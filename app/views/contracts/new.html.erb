@@ -1,0 +1,24 @@
+<h1>New Contract</h1>
+<%= simple_form_for :contract, url: contracts_path do |f| %>
+  <%= f.error_notification %>
+
+  <p>
+    <%= f.input :contract_number %>
+  </p>
+
+  <p>
+    <%= f.input :contract_description %>
+  </p>
+
+  <p>
+    <%= f.input :customer, collection: Customer.all %>
+  </p>
+
+  <p>
+    <%= f.input :order_way, collection: Contract.order_way.values, as: :radio_buttons %>
+  </p>
+
+  <p>
+    <%= f.button :submit, 'Add contract' %>
+  </p>
+<%end%>

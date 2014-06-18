@@ -1,0 +1,8 @@
+cs:
+ simple_form:
+    labels:
+      contract:
+        contract_number: "Číslo zakázky"
+        contract_description: "Popis zakázky"
+        customer: "Zákazník"
+        order_way: "Způsob objednání"
