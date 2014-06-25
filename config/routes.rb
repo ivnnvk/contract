@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
-  resources :customers do
-    resources :contracts
+  resources :source_types do
+    resources :sources
   end
 
-  resources :contracts
+  resources :sources
+  resources :employees
+  resources :cadastral_offices
+  resources :townships
+  resources :customers
+  resources :invoices
 
-  root 'welcome#index'
-
-  # The priority is based upon order of creation: first created -> highest priority.
+ # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

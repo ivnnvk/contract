@@ -5,49 +5,65 @@ one:
   record_number: MyString
   cadastral_territory: MyString
   regarding_plat_numbers: MyString
-  acceptance_date: 2014-06-15 11:10:11
-  fulfilment_term: 2014-06-15 11:10:11
+  acceptance_date: 2014-06-25 08:29:07
+  fulfilment_term: 2014-06-25 08:29:07
   contract_description: MyText
-  order_way: MyString
   order_number: MyString
-  order_type: MyString
-  bend_date: 2014-06-15 11:10:11
-  make_out_date: 2014-06-15 11:10:11
-  check_date: 2014-06-15 11:10:11
+  bend_date: 2014-06-25 08:29:07
+  make_out_date: 2014-06-25 08:29:07
+  check_date: 2014-06-25 08:29:07
   unfulfill_reason: MyText
   sketch_number: MyString
-  handover_date: 2014-06-15 11:10:11
-  handover_way: MyString
+  handover_date: 2014-06-25 08:29:07
   deliver_address: MyString
   agreed_price: 9.99
-  price_creation: MyString
   price_creation_specification: MyText
   Information_from_CO_ect: MyText
   invoicing_foundations: MyText
   other_important_particulars: MyText
+  customer_id: 
+  cadastral_office_id: 
+  township_id: 
+  responsible_id: 
+  bend_id: 
+  drawed_up_id: 
+  checked_id: 
+  screened_id: 
+  order_way_id: 
+  order_type_id: 
+  handover_way_id: 
+  price_creation_id: 
 
 two:
   contract_number: MyString
   record_number: MyString
   cadastral_territory: MyString
   regarding_plat_numbers: MyString
-  acceptance_date: 2014-06-15 11:10:11
-  fulfilment_term: 2014-06-15 11:10:11
+  acceptance_date: 2014-06-25 08:29:07
+  fulfilment_term: 2014-06-25 08:29:07
   contract_description: MyText
-  order_way: MyString
   order_number: MyString
-  order_type: MyString
-  bend_date: 2014-06-15 11:10:11
-  make_out_date: 2014-06-15 11:10:11
-  check_date: 2014-06-15 11:10:11
+  bend_date: 2014-06-25 08:29:07
+  make_out_date: 2014-06-25 08:29:07
+  check_date: 2014-06-25 08:29:07
   unfulfill_reason: MyText
   sketch_number: MyString
-  handover_date: 2014-06-15 11:10:11
-  handover_way: MyString
+  handover_date: 2014-06-25 08:29:07
   deliver_address: MyString
   agreed_price: 9.99
-  price_creation: MyString
   price_creation_specification: MyText
   Information_from_CO_ect: MyText
   invoicing_foundations: MyText
   other_important_particulars: MyText
+  customer_id: 
+  cadastral_office_id: 
+  township_id: 
+  responsible_id: 
+  bend_id: 
+  drawed_up_id: 
+  checked_id: 
+  screened_id: 
+  order_way_id: 
+  order_type_id: 
+  handover_way_id: 
+  price_creation_id: 

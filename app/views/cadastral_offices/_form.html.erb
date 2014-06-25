@@ -1,0 +1,22 @@
+<%= form_for(@cadastral_office) do |f| %>
+  <% if @cadastral_office.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cadastral_office.errors.count, "error") %> prohibited this cadastral_office from being saved:</h2>
+
+      <ul>
+      <% @cadastral_office.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

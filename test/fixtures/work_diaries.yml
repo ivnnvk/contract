@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from: 2014-06-25 08:35:32
+  to: 2014-06-25 08:35:32
+  employee_id: 
+  contract_id: 
+
+two:
+  from: 2014-06-25 08:35:32
+  to: 2014-06-25 08:35:32
+  employee_id: 
+  contract_id: 

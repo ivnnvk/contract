@@ -1,0 +1,27 @@
+<h1>Listing townships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%=t 'name' %></td>
+    </tr>
+    <% @townships.each do |township| %>
+      <tr>
+        <td><%= township.name %></td>
+        <td><%= link_to 'Show', township %></td>
+        <td><%= link_to 'Edit', edit_township_path(township) %></td>
+        <td><%= link_to 'Destroy', township, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Township', new_township_path %>
