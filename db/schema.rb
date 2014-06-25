@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625063812) do
+ActiveRecord::Schema.define(version: 20140625090433) do
 
   create_table "cadastral_offices", force: true do |t|
     t.string   "name"
@@ -152,11 +152,13 @@ ActiveRecord::Schema.define(version: 20140625063812) do
     t.decimal  "amount"
     t.integer  "source_id"
     t.integer  "contract_id"
+    t.integer  "employee_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "usage_sources", ["contract_id"], name: "index_usage_sources_on_contract_id"
+  add_index "usage_sources", ["employee_id"], name: "index_usage_sources_on_employee_id"
   add_index "usage_sources", ["source_id"], name: "index_usage_sources_on_source_id"
 
   create_table "work_diaries", force: true do |t|

@@ -6,7 +6,7 @@ rails generate model Employee user_name:string name:string hour_rate:decimal --f
 
 rails generate model Work_diary from:datetime to:datetime employee:references contract:references --force
 
-rails generate model Usage_source from:datetime to:datetime unit_price:decimal amount:decimal source:references contract:references employee:references --force
+rails generate model Usage_source from:datetime to:datetime unit_price:decimal amount:decimal source:references contract:references --force
 
 rails generate model Invoice number:string amount:decimal issue_date:date due_date:date contract:references --force
 

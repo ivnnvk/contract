@@ -11,4 +11,8 @@ class Contract < ActiveRecord::Base
   belongs_to :order_type
   belongs_to :handover_way
   belongs_to :price_creation
+
+  has_many :work_diaries
+  has_many :ussage_sources
+  has_many :invoices
 end

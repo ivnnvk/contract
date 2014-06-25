@@ -7,6 +7,7 @@ class CreateUsageSources < ActiveRecord::Migration
       t.decimal :amount
       t.references :source, index: true
       t.references :contract, index: true
+      t.references :employee, index: true
 
       t.timestamps
     end
