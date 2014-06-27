@@ -1,0 +1,22 @@
+<%= form_for(@handover_way) do |f| %>
+  <% if @handover_way.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@handover_way.errors.count, "error") %> prohibited this handover_way from being saved:</h2>
+
+      <ul>
+      <% @handover_way.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

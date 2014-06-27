@@ -1,0 +1,23 @@
+<h1>Listing usage_sources</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @usage_sources.each do |usage_source| %>
+      <tr>
+        <td><%= link_to 'Show', usage_source %></td>
+        <td><%= link_to 'Edit', edit_usage_source_path(usage_source) %></td>
+        <td><%= link_to 'Destroy', usage_source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Usage source', new_usage_source_path %>

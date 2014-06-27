@@ -1,0 +1,22 @@
+<%= form_for(@order_way) do |f| %>
+  <% if @order_way.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order_way.errors.count, "error") %> prohibited this order_way from being saved:</h2>
+
+      <ul>
+      <% @order_way.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

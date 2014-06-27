@@ -1,0 +1,2 @@
+module HandoverWaysHelper
+end

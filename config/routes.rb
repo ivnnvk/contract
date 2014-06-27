@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   resources :townships
   resources :customers
   resources :invoices
+  resources :order_ways
+  resources :order_types
+  resources :handover_ways
+  resources :price_creations
 
  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
