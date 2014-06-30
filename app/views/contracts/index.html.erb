@@ -8,8 +8,18 @@
   </thead>
 
   <tbody>
+    <tr>
+      <td><%=t 'contract_number' %></td>
+      <td><%=t 'record_number' %></td>
+      <td><%=t 'cadastral_territory' %></td>
+      <td><%=t 'contract_description' %></td>
+    </tr>
     <% @contracts.each do |contract| %>
       <tr>
+        <td><%= contract.contract_number %></td>
+        <td><%= contract.record_number %></td>
+        <td><%= contract.cadastral_territory %></td>
+        <td><%= contract.contract_description %></td>
         <td><%= link_to 'Show', contract %></td>
         <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
         <td><%= link_to 'Destroy', contract, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     resources :sources
   end
 
+  resources :contracts
+  resources :work_diaries
+  resources :usage_sources
   resources :sources
   resources :employees
   resources :cadastral_offices

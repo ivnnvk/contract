@@ -15,10 +15,26 @@ class ContractsController < ApplicationController
   # GET /contracts/new
   def new
     @contract = Contract.new
+    @cadastral_offices = CadastralOffice.all
+    @townships = Township.all
+    @order_ways = OrderWay.all
+    @order_types = OrderType.all
+    @handover_ways = HandoverWay.all
+    @price_creations = PriceCreation.all
+    @customers = Customer.all
+    @employees = Employee.all
   end
 
   # GET /contracts/1/edit
   def edit
+    @cadastral_offices = CadastralOffice.all
+    @townships = Township.all
+    @order_ways = OrderWay.all
+    @order_types = OrderType.all
+    @handover_ways = HandoverWay.all
+    @price_creations = PriceCreation.all
+    @customers = Customer.all
+    @employees = Employee.all
   end
 
   # POST /contracts
@@ -69,6 +85,13 @@ class ContractsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contract_params
-      params[:contract]
+      params.require(:contract).permit(:contract_number, :record_number, :cadastral_territory, 
+        :regarding_plat_numbers, :acceptance_date, :fulfilment_term, :contract_description,
+        :order_number, :ordered_by, :order_phone, :bend_date, :make_out_date, :check_date,
+        :unfulfill_reason, :sketch_number, :screened_date, :handover_date, :deliver_address,
+        :agreed_price, :price_creation_specification, :information_from_CO_ect, :invoicing_foundations,
+        :other_important_particulars, :customer_id, :cadastral_office_id, :township_id, 
+        :responsible_id, :bend_id, :drawed_up_id, :checked_id, :screened_id, :order_way_id,
+        :order_type_id, :handover_way_id, :price_creation_id) 
     end
 end

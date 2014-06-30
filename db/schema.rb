@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625090433) do
+ActiveRecord::Schema.define(version: 20140629205625) do
 
   create_table "cadastral_offices", force: true do |t|
     t.string   "name"
@@ -28,16 +28,19 @@ ActiveRecord::Schema.define(version: 20140625090433) do
     t.datetime "fulfilment_term"
     t.text     "contract_description"
     t.string   "order_number"
+    t.string   "ordered_by"
+    t.string   "order_phone"
     t.datetime "bend_date"
     t.datetime "make_out_date"
     t.datetime "check_date"
     t.text     "unfulfill_reason"
     t.string   "sketch_number"
+    t.datetime "screened_date"
     t.datetime "handover_date"
     t.string   "deliver_address"
     t.decimal  "agreed_price"
     t.text     "price_creation_specification"
-    t.text     "Information_from_CO_ect"
+    t.text     "information_from_CO_ect"
     t.text     "invoicing_foundations"
     t.text     "other_important_particulars"
     t.integer  "customer_id"
