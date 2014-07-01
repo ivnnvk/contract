@@ -15,10 +15,21 @@ class UsageSourcesController < ApplicationController
   # GET /usage_sources/new
   def new
     @usage_source = UsageSource.new
+    @employees = Employee.all
+    @contracts = Contract.all
+    @sources = Source.all
   end
 
   # GET /usage_sources/1/edit
   def edit
+    @employees = Employee.all
+    @contracts = Contract.all
+    @sources = Source.all
+    #@sources_select_for = Hash.new
+    #@sources.each do |usage_source|
+    #  @sources_select_for.add(id: usage_source.id, type_description: (
+    #    SourceType.find(usage_source.source_type_id).name + ": " + usage_source.description))
+    #end
   end
 
   # POST /usage_sources
@@ -69,6 +80,7 @@ class UsageSourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def usage_source_params
-      params[:usage_source]
+      params.require(:usage_source).permit(:employee_id, :contract_id, 
+        :source_id, :from, :to, :unit_number, :amount)
     end
 end

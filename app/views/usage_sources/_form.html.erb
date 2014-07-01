@@ -11,6 +11,41 @@
     </div>
   <% end %>
 
+  <div>
+    <%= f.label :reported_by %><br>
+    <%= f.collection_select(:employee_id, @employees, :id, :name) %>
+  </div>
+
+  <div>
+    <%= f.label :contract %><br>
+    <%= f.collection_select(:contract_id, @contracts, :id, :contract_number) %>
+  </div>
+
+  <div>
+    <%= f.label :source %><br>
+    <%= f.collection_select(:source_id, @sources, :id, :description) %>
+  </div>
+
+  <div>
+    <%= f.label :from %><br>
+    <%= f.text_field :from %>
+  </div>
+
+  <div>
+    <%= f.label :to %><br>
+    <%= f.text_field :to %>
+  </div>
+
+  <div>
+    <%= f.label :unit_number %><br>
+    <%= f.text_field :unit_number %>
+  </div>
+
+  <div>
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

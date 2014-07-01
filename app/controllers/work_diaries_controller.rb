@@ -15,10 +15,14 @@ class WorkDiariesController < ApplicationController
   # GET /work_diaries/new
   def new
     @work_diary = WorkDiary.new
+    @employees = Employee.all
+    @contracts = Contract.all
   end
 
   # GET /work_diaries/1/edit
   def edit
+    @employees = Employee.all
+    @contracts = Contract.all
   end
 
   # POST /work_diaries
@@ -69,6 +73,6 @@ class WorkDiariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_diary_params
-      params[:work_diary]
+      params.require(:work_diary).permit(:employee_id, :contract_id, :from, :to)
     end
 end

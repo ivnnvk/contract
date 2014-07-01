@@ -5,19 +5,19 @@ class CreateContracts < ActiveRecord::Migration
       t.string :record_number
       t.string :cadastral_territory
       t.string :regarding_plat_numbers
-      t.datetime :acceptance_date
-      t.datetime :fulfilment_term
+      t.date :acceptance_date
+      t.date :fulfilment_term
       t.text :contract_description
       t.string :order_number
       t.string :ordered_by
       t.string :order_phone
-      t.datetime :bend_date
-      t.datetime :make_out_date
-      t.datetime :check_date
+      t.date :bend_date
+      t.date :make_out_date
+      t.date :check_date
       t.text :unfulfill_reason
       t.string :sketch_number
-      t.datetime :screened_date
-      t.datetime :handover_date
+      t.date :screened_date
+      t.date :handover_date
       t.string :deliver_address
       t.decimal :agreed_price
       t.text :price_creation_specification

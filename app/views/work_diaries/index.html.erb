@@ -8,8 +8,21 @@
   </thead>
 
   <tbody>
-    <% @work_diaries.each do |work_diary| %>
+    <tr>
+      <td><%=t 'employee' %></td>
+      <td><%=t 'contract' %></td>
+      <td><%=t 'from' %></td>
+      <td><%=t 'to' %></td>
+    </tr>
+    <% @work_diaries.each do |work_diary| 
+      @employee = Employee.find(work_diary.employee_id) 
+      @contract = Contract.find(work_diary.contract_id) 
+      %>
       <tr>
+        <td><%= @employee.name %></td>
+        <td><%= @contract.contract_number %></td>
+        <td><%= work_diary.from %></td>
+        <td><%= work_diary.to %></td>
         <td><%= link_to 'Show', work_diary %></td>
         <td><%= link_to 'Edit', edit_work_diary_path(work_diary) %></td>
         <td><%= link_to 'Destroy', work_diary, method: :delete, data: { confirm: 'Are you sure?' } %></td>

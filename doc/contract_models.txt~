@@ -1,4 +1,4 @@
-rails generate model Contract contract_number:string record_number:string cadastral_territory:string regarding_plat_numbers:string acceptance_date:datetime fulfilment_term:datetime contract_description:text order_number:string ordered_by:string order_phone:string bend_date:datetime make_out_date:datetime check_date:datetime unfulfill_reason:text sketch_number:string screened_date:datetime handover_date:datetime deliver_address:string agreed_price:decimal price_creation_specification:text Information_from_CO_ect:text invoicing_foundations:text other_important_particulars:text customer:references cadastral_office:references township:references responsible:references bend:references drawed_up:references checked:references screened:references order_way:references order_type:references handover_way:references price_creation:references --force
+rails generate model Contract contract_number:string record_number:string cadastral_territory:string regarding_plat_numbers:string acceptance_date:date fulfilment_term:date contract_description:text order_number:string ordered_by:string order_phone:string bend_date:date make_out_date:date check_date:date unfulfill_reason:text sketch_number:string screened_date:date handover_date:date deliver_address:string agreed_price:decimal price_creation_specification:text information_from_CO_ect:text invoicing_foundations:text other_important_particulars:text customer:references cadastral_office:references township:references responsible:references bend:references drawed_up:references checked:references screened:references order_way:references order_type:references handover_way:references price_creation:references --force
 
 rails generate model Customer name:string place:text representant:string phone:string --force
 
@@ -6,7 +6,7 @@ rails generate model Employee user_name:string name:string hour_rate:decimal --f
 
 rails generate model Work_diary from:datetime to:datetime employee:references contract:references --force
 
-rails generate model Usage_source from:datetime to:datetime unit_price:decimal amount:decimal source:references contract:references employee:references --force
+rails generate model Usage_source from:datetime to:datetime unit_number:decimal amount:decimal source:references contract:references employee:references --force
 
 rails generate model Invoice number:string amount:decimal issue_date:date due_date:date contract:references --force
 

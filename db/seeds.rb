@@ -7,14 +7,18 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Employee.create("user_name"=>"pzachar", "name"=>"Pavel Zachar", "hour_rate"=>500)
 Employee.create("user_name"=>"jplacha", "name"=>"Jana Plachá", "hour_rate"=>500)
-Source.create("description"=>"Ford\r\n1S1 7568", "unit"=>"km", "unit_price"=>4.2, "source_type_id"=>1)
-Source.create("description"=>"Fabia\r\n1ST 2043", "unit"=>"km", "unit_price"=>4.2, "source_type_id"=>1)
+Source.create("description"=>"Ford\r\n1S1 7568", "unit"=>"km", "unit_price"=>4.2, 
+	"source_type_id"=>1)
+Source.create("description"=>"Fabia\r\n1ST 2043", "unit"=>"km", "unit_price"=>4.2, 
+	"source_type_id"=>1)
 Source.create("description"=>"", "unit"=>"ks", "unit_price"=>150, "source_type_id"=>2)
-Source.create("description"=>"nastřelovací hřebíky", "unit"=>"kg", "unit_price"=>160, "source_type_id"=>3)
+Source.create("description"=>"nastřelovací hřebíky", "unit"=>"kg", "unit_price"=>160, 
+	"source_type_id"=>3)
 SourceType.create("name"=>"auto")
 SourceType.create("name"=>"mezník")
 SourceType.create("name"=>"ostatní")
-Customer.create("name"=>"Hooktes", "place"=>"Krákorova 123\r\nMladá Vožice", "representant"=>"Pavel Hujer", "phone"=>"725232737")
+Customer.create("name"=>"Hooktes", "place"=>"Krákorova 123\r\nMladá Vožice", 
+	"representant"=>"Pavel Hujer", "phone"=>"725232737")
 Township.create("name"=>"Kolín")
 CadastralOffice.create("name"=>"Kolín")
 OrderWay.create("name"=>"telefonicky")
@@ -31,18 +35,26 @@ HandoverWay.create("name"=>"elektronicky - email")
 PriceCreation.create("name"=>"výpočet")
 PriceCreation.create("name"=>"dle obvyklého ceníku")
 PriceCreation.create("name"=>"nedomluvena")
-PriceCreation.create("name"=>"bude upřesněma - kdy a jak")
-Contract.create("contract_number"=>"00209087-91/2014", "record_number"=>"00177563", "cadastral_territory"=>"122", 
-"regarding_plat_numbers"=>"256/2, 266/8", "acceptance_date"=>"Sun, 01 Jun 2014 00:00:00 UTC +00:00", 
-"fulfilment_term"=>"Tue, 15 Jul 2014 00:00:00 UTC +00:00", "contract_description"=>"Zaměřit barák\r\na taky pozemek", 
-"order_number"=>nil, "ordered_by"=>"Plachá", "order_phone"=>"123456798", 
-"bend_date"=>"Tue, 10 Jun 2014 00:00:00 UTC +00:00", "make_out_date"=>"Fri, 20 Jun 2014 00:00:00 UTC +00:00", 
-"check_date"=>"Sun, 22 Jun 2014 00:00:00 UTC +00:00", "unfulfill_reason"=>"", 
-"sketch_number"=>"21254", "screened_date"=>"Wed, 25 Jun 2014 00:00:00 UTC +00:00", 
-"handover_date"=>"Thu, 26 Jun 2014 00:00:00 UTC +00:00", 
-"deliver_address"=>"Kopín\r\nKolínova 265", "agreed_price"=>15255, 
-"price_creation_specification"=>"", "information_from_CO_ect"=>"na katastru to zaevidovali", 
-"invoicing_foundations"=>"fakturovat co nejdříve", "other_important_particulars"=>"", 
-"customer_id"=>1, "cadastral_office_id"=>1, "township_id"=>1, "responsible_id"=>nil, 
-"bend_id"=>2, "drawed_up_id"=>1, "checked_id"=>1, "screened_id"=>1, "order_way_id"=>2, 
-"order_type_id"=>2, "handover_way_id"=>2, "price_creation_id"=>1)
+PriceCreation.create("name"=>"bude upřesněna - kdy a jak")
+Contract.create("contract_number"=>"00209087-91/2014", "record_number"=>"00177563", 
+	"cadastral_territory"=>"122", "regarding_plat_numbers"=>"256/2, 266/8", 
+	"acceptance_date"=>"Sun, 01 Jun 2014", "fulfilment_term"=>"Tue, 15 Jul 2014", 
+	"contract_description"=>"Zaměřit barák\r\na taky pozemek", 
+	"order_number"=>nil, "ordered_by"=>"Plachá", "order_phone"=>"123456798", 
+	"bend_date"=>"Tue, 10 Jun 2014", "make_out_date"=>"Fri, 20 Jun 2014", 
+	"check_date"=>"Sun, 22 Jun 2014", "unfulfill_reason"=>"", 
+	"sketch_number"=>"21254", "screened_date"=>"Wed, 25 Jun 2014", 
+	"handover_date"=>"Thu, 26 Jun 2014", 
+	"deliver_address"=>"Kopín\r\nKolínova 265", "agreed_price"=>15255, 
+	"price_creation_specification"=>"", "information_from_CO_ect"=>"na katastru to zaevidovali", 
+	"invoicing_foundations"=>"fakturovat co nejdříve", "other_important_particulars"=>"", 
+	"customer_id"=>1, "cadastral_office_id"=>1, "township_id"=>1, "responsible_id"=>nil, 
+	"bend_id"=>2, "drawed_up_id"=>1, "checked_id"=>1, "screened_id"=>1, "order_way_id"=>2, 
+	"order_type_id"=>2, "handover_way_id"=>2, "price_creation_id"=>1)
+Invoice.create("number"=>"1365/14", "amount"=>15255, "issue_date"=>"Mon, 30 Jun 2014", 
+	"due_date"=>"Tue, 15 Jul 2014", "contract_id"=>1)
+WorkDiary.create("from"=>"Mon, 30 Jun 2014 08:00:00 UTC +00:00", 
+	"to"=>"Mon, 30 Jun 2014 12:00:00 UTC +00:00", "employee_id"=>1, "contract_id"=>1)
+UsageSource.create("from"=>"Mon, 30 Jun 2014 08:00:00 UTC +00:00", 
+	"to"=>"Mon, 30 Jun 2014 12:00:00 UTC +00:00", "unit_number"=>70, "amount"=>nil, 
+	"source_id"=>2, "contract_id"=>1, "employee_id"=>1)

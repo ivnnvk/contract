@@ -8,8 +8,28 @@
   </thead>
 
   <tbody>
-    <% @usage_sources.each do |usage_source| %>
+    <tr>
+      <td><%=t 'reported_by' %></td>
+      <td><%=t 'contract' %></td>
+      <td><%=t 'source' %></td>
+      <td><%=t 'from' %></td>
+      <td><%=t 'to' %></td>
+      <td><%=t 'unit_number' %></td>
+      <td><%=t 'amount' %></td>
+    </tr>
+    <% @usage_sources.each do |usage_source| 
+      @employee = Employee.find(usage_source.employee_id) 
+      @contract = Contract.find(usage_source.contract_id) 
+      @source = Source.find(usage_source.source_id) 
+      %>
       <tr>
+        <td><%= @employee.name %></td>
+        <td><%= @contract.contract_number %></td>
+        <td><%= @source.description %></td>
+        <td><%= usage_source.from %></td>
+        <td><%= usage_source.to %></td>
+        <td><%= usage_source.unit_number %></td>
+        <td><%= usage_source.amount %></td>
         <td><%= link_to 'Show', usage_source %></td>
         <td><%= link_to 'Edit', edit_usage_source_path(usage_source) %></td>
         <td><%= link_to 'Destroy', usage_source, method: :delete, data: { confirm: 'Are you sure?' } %></td>

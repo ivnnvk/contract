@@ -3,7 +3,7 @@ class CreateUsageSources < ActiveRecord::Migration
     create_table :usage_sources do |t|
       t.datetime :from
       t.datetime :to
-      t.decimal :unit_price
+      t.decimal :unit_number
       t.decimal :amount
       t.references :source, index: true
       t.references :contract, index: true

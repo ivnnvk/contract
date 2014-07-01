@@ -5,19 +5,19 @@ one:
   record_number: MyString
   cadastral_territory: MyString
   regarding_plat_numbers: MyString
-  acceptance_date: 2014-06-29 22:56:25
-  fulfilment_term: 2014-06-29 22:56:25
+  acceptance_date: 2014-07-01
+  fulfilment_term: 2014-07-01
   contract_description: MyText
   order_number: MyString
   ordered_by: MyString
   order_phone: MyString
-  bend_date: 2014-06-29 22:56:25
-  make_out_date: 2014-06-29 22:56:25
-  check_date: 2014-06-29 22:56:25
+  bend_date: 2014-07-01
+  make_out_date: 2014-07-01
+  check_date: 2014-07-01
   unfulfill_reason: MyText
   sketch_number: MyString
-  screened_date: 2014-06-29 22:56:25
-  handover_date: 2014-06-29 22:56:25
+  screened_date: 2014-07-01
+  handover_date: 2014-07-01
   deliver_address: MyString
   agreed_price: 9.99
   price_creation_specification: MyText
@@ -42,19 +42,19 @@ two:
   record_number: MyString
   cadastral_territory: MyString
   regarding_plat_numbers: MyString
-  acceptance_date: 2014-06-29 22:56:25
-  fulfilment_term: 2014-06-29 22:56:25
+  acceptance_date: 2014-07-01
+  fulfilment_term: 2014-07-01
   contract_description: MyText
   order_number: MyString
   ordered_by: MyString
   order_phone: MyString
-  bend_date: 2014-06-29 22:56:25
-  make_out_date: 2014-06-29 22:56:25
-  check_date: 2014-06-29 22:56:25
+  bend_date: 2014-07-01
+  make_out_date: 2014-07-01
+  check_date: 2014-07-01
   unfulfill_reason: MyText
   sketch_number: MyString
-  screened_date: 2014-06-29 22:56:25
-  handover_date: 2014-06-29 22:56:25
+  screened_date: 2014-07-01
+  handover_date: 2014-07-01
   deliver_address: MyString
   agreed_price: 9.99
   price_creation_specification: MyText
