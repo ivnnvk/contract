@@ -18,14 +18,19 @@
       <td><%=t 'amount' %></td>
     </tr>
     <% @usage_sources.each do |usage_source| 
-      @employee = Employee.find(usage_source.employee_id) 
-      @contract = Contract.find(usage_source.contract_id) 
-      @source = Source.find(usage_source.source_id) 
+      employee = Employee.find(usage_source.employee_id) 
+      contract = Contract.find(usage_source.contract_id) 
+      source = Source.find(usage_source.source_id)
+      appender = ""
+      if source.description != ""
+        appender = ": " + source.description
+      end
+ 
       %>
       <tr>
-        <td><%= @employee.name %></td>
-        <td><%= @contract.contract_number %></td>
-        <td><%= @source.description %></td>
+        <td><%= employee.name %></td>
+        <td><%= contract.contract_number %></td>
+        <td><%= SourceType.find(source.source_type_id).name + appender %></td>
         <td><%= usage_source.from %></td>
         <td><%= usage_source.to %></td>
         <td><%= usage_source.unit_number %></td>

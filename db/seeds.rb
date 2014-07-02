@@ -45,7 +45,7 @@ Contract.create("contract_number"=>"00209087-91/2014", "record_number"=>"0017756
 	"check_date"=>"Sun, 22 Jun 2014", "unfulfill_reason"=>"", 
 	"sketch_number"=>"21254", "screened_date"=>"Wed, 25 Jun 2014", 
 	"handover_date"=>"Thu, 26 Jun 2014", 
-	"deliver_address"=>"Kopín\r\nKolínova 265", "agreed_price"=>15255, 
+	"deliver_address"=>"Kolín\r\nKolínova 265", "agreed_price"=>15255, 
 	"price_creation_specification"=>"", "information_from_CO_ect"=>"na katastru to zaevidovali", 
 	"invoicing_foundations"=>"fakturovat co nejdříve", "other_important_particulars"=>"", 
 	"customer_id"=>1, "cadastral_office_id"=>1, "township_id"=>1, "responsible_id"=>nil, 
