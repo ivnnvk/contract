@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :source_types do
-    resources :sources
-  end
+  #resources :source_types do
+  #  resources :sources
+  #end
 
+  resources :source_types
   resources :contracts
   resources :work_diaries
   resources :usage_sources
@@ -17,7 +18,8 @@ Rails.application.routes.draw do
   resources :handover_ways
   resources :price_creations
 
- # The priority is based upon order of creation: first created -> highest priority.
+  root 'welcome#index'
+  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

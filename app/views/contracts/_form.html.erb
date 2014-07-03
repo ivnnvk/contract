@@ -1,182 +1,213 @@
-<%= form_for(@contract) do |f| %>
-  <% if @contract.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@contract.errors.count, "error") %> prohibited this contract from being saved:</h2>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-      <ul>
-      <% @contract.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+  <tbody>
+    <%= form_for(@contract) do |f| %>
+      <% if @contract.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@contract.errors.count, "error") %> prohibited this contract from being saved:</h2>
+
+          <ul>
+          <% @contract.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div>
-    <%= f.label :contract_number %><br>
-    <%= f.text_field :contract_number %>
-  </div>
+      <tr>
+        <td>
+          <div>
+            <%= f.label :contract_number %><br>
+            <%= f.text_field :contract_number %>
+          </div>
 
-  <div>
-    <%= f.label :acceptance_date %><br>
-    <%= f.text_field :acceptance_date %>
-  </div>
+          <div>
+            <%= f.label :acceptance_date %><br>
+            <%= f.text_field :acceptance_date %>
+          </div>
 
-  <div>
-    <%= f.label :fulfilment_term %><br>
-    <%= f.text_field :fulfilment_term %>
-  </div>
+          <div>
+            <%= f.label :fulfilment_term %><br>
+            <%= f.text_field :fulfilment_term %>
+          </div>
 
-  <div>
-    <%= f.label :contract_description %><br>
-    <%= f.text_area :contract_description %>
-  </div>
+          <div>
+            <%= f.label :contract_description %><br>
+            <%= f.text_area :contract_description %>
+          </div>
+        </td>
+        <td>
+          <div>
+            <%= f.label :record_number %><br>
+            <%= f.text_field :record_number %>
+          </div>
 
-  <div>
-    <%= f.label :record_number %><br>
-    <%= f.text_field :record_number %>
-  </div>
+          <div>
+            <%= f.label :cadastral_office %><br>
+            <%= f.collection_select(:cadastral_office_id, @cadastral_offices, :id, :name) %>
+          </div>
 
-  <div>
-    <%= f.label :cadastral_office %><br>
-    <%= f.collection_select(:cadastral_office_id, @cadastral_offices, :id, :name) %>
-  </div>
+          <div>
+            <%= f.label :township %><br>
+            <%= f.collection_select(:township_id, @townships, :id, :name) %>
+          </div>
 
-  <div>
-    <%= f.label :township %><br>
-    <%= f.collection_select(:township_id, @townships, :id, :name) %>
-  </div>
+          <div>
+            <%= f.label :cadastral_territory %><br>
+            <%= f.text_field :cadastral_territory %>
+          </div>
 
-  <div>
-    <%= f.label :cadastral_territory %><br>
-    <%= f.text_field :cadastral_territory %>
-  </div>
+          <div>
+            <%= f.label :regarding_plat_numbers %><br>
+            <%= f.text_field :regarding_plat_numbers %>
+          </div>
+        </td>
+      </tr>
 
-  <div>
-    <%= f.label :regarding_plat_numbers %><br>
-    <%= f.text_field :regarding_plat_numbers %>
-  </div>
+      <tr>
+        <td>
+          <div>
+            <%= f.label :customer %><br>
+            <%= f.collection_select(:customer_id, @customers, :id, :name) %>
+          </div>
 
-  <div>
-    <%= f.label :customer %><br>
-    <%= f.collection_select(:customer_id, @customers, :id, :name) %>
-  </div>
+          <div>
+            <%= f.label :ordered_by %><br>
+            <%= f.text_field :ordered_by %>
+          </div>
 
-  <div>
-    <%= f.label :ordered_by %><br>
-    <%= f.text_field :ordered_by %>
-  </div>
+          <div>
+            <%= f.label :order_phone %><br>
+            <%= f.text_field :order_phone %>
+          </div>
 
-  <div>
-    <%= f.label :order_phone %><br>
-    <%= f.text_field :order_phone %>
-  </div>
+          <div>
+            <%= f.label :order_way %><br>
+            <%= f.collection_select(:order_way_id, @order_ways, :id, :name) %>
+          </div>
 
-  <div>
-    <%= f.label :order_way %><br>
-    <%= f.collection_select(:order_way_id, @order_ways, :id, :name) %>
-  </div>
+          <div>
+            <%= f.label :order_type %><br>
+            <%= f.collection_select(:order_type_id, @order_types, :id, :name) %>
+          </div>
+        </td>
+        <td>
+          <div>
+            <%= f.label :bend_date %><br>
+            <%= f.text_field :bend_date %>
+          </div>
 
-  <div>
-    <%= f.label :order_type %><br>
-    <%= f.collection_select(:order_type_id, @order_types, :id, :name) %>
-  </div>
+          <div>
+            <%= f.label :bend %><br>
+            <%= f.collection_select(:bend_id, @employees, :id, :name) %>
+          </div>
 
-  <div>
-    <%= f.label :bend_date %><br>
-    <%= f.text_field :bend_date %>
-  </div>
+          <div>
+            <%= f.label :make_out_date %><br>
+            <%= f.text_field :make_out_date %>
+          </div>
 
-  <div>
-    <%= f.label :bend %><br>
-    <%= f.collection_select(:bend_id, @employees, :id, :name) %>
-  </div>
+          <div>
+            <%= f.label :drawed_up %><br>
+            <%= f.collection_select(:drawed_up_id, @employees, :id, :name) %>
+          </div>
 
-  <div>
-    <%= f.label :make_out_date %><br>
-    <%= f.text_field :make_out_date %>
-  </div>
+          <div>
+            <%= f.label :sketch_number %><br>
+            <%= f.text_field :sketch_number %>
+          </div>
+        </td>
+      </tr>
 
-  <div>
-    <%= f.label :drawed_up %><br>
-    <%= f.collection_select(:drawed_up_id, @employees, :id, :name) %>
-  </div>
+      <tr>
+        <td>
+          <div>
+            <%= f.label :check_date %><br>
+            <%= f.text_field :check_date %>
+          </div>
 
-  <div>
-    <%= f.label :sketch_number %><br>
-    <%= f.text_field :sketch_number %>
-  </div>
+          <div>
+            <%= f.label :checked %><br>
+            <%= f.collection_select(:checked_id, @employees, :id, :name) %>
+          </div>
 
-  <div>
-    <%= f.label :check_date %><br>
-    <%= f.text_field :check_date %>
-  </div>
+          <div>
+            <%= f.label :unfulfill_reason %><br>
+            <%= f.text_area :unfulfill_reason %>
+          </div>
 
-  <div>
-    <%= f.label :checked %><br>
-    <%= f.collection_select(:checked_id, @employees, :id, :name) %>
-  </div>
+          <div>
+            <%= f.label :screened_date %><br>
+            <%= f.text_field :screened_date %>
+          </div>
 
-  <div>
-    <%= f.label :unfulfill_reason %><br>
-    <%= f.text_area :unfulfill_reason %>
-  </div>
+          <div>
+            <%= f.label :screened %><br>
+            <%= f.collection_select(:screened_id, @employees, :id, :name) %>
+          </div>
+        </td>
+        <td>
+          <div>
+            <%= f.label :handover_date %><br>
+            <%= f.text_field :handover_date %>
+          </div>
 
-  <div>
-    <%= f.label :screened_date %><br>
-    <%= f.text_field :screened_date %>
-  </div>
+          <div>
+            <%= f.label :handover_way %><br>
+            <%= f.collection_select(:handover_way_id, @handover_ways, :id, :name) %>
+          </div>
 
-  <div>
-    <%= f.label :screened %><br>
-    <%= f.collection_select(:screened_id, @employees, :id, :name) %>
-  </div>
+          <div>
+            <%= f.label :deliver_address %><br>
+            <%= f.text_area :deliver_address %>
+          </div>
 
-  <div>
-    <%= f.label :handover_date %><br>
-    <%= f.text_field :handover_date %>
-  </div>
+          <div>
+            <%= f.label :price_creation %><br>
+            <%= f.collection_select(:price_creation_id, @price_creations, :id, :name) %>
+          </div>
 
-  <div>
-    <%= f.label :handover_way %><br>
-    <%= f.collection_select(:handover_way_id, @handover_ways, :id, :name) %>
-  </div>
+          <div>
+            <%= f.label :price_creation_specification %><br>
+            <%= f.text_area :price_creation_specification %>
+          </div>
+        </td>
+      </tr>
 
-  <div>
-    <%= f.label :deliver_address %><br>
-    <%= f.text_area :deliver_address %>
-  </div>
+      <tr>
+        <td>
+          <div>
+            <%= f.label :agreed_price %><br>
+            <%= f.text_field :agreed_price %>
+          </div>
 
-  <div>
-    <%= f.label :price_creation %><br>
-    <%= f.collection_select(:price_creation_id, @price_creations, :id, :name) %>
-  </div>
+          <div>
+            <%= f.label :invoicing_foundations %><br>
+            <%= f.text_area :invoicing_foundations %>
+          </div>
+        </td>
+        <td>
+          <div>
+            <%= f.label :information_from_CO_ect %><br>
+            <%= f.text_area :information_from_CO_ect %>
+          </div>
 
-  <div>
-    <%= f.label :price_creation_specification %><br>
-    <%= f.text_area :price_creation_specification %>
-  </div>
+          <div>
+            <%= f.label :other_important_particulars %><br>
+            <%= f.text_area :other_important_particulars %>
+          </div>
 
-  <div>
-    <%= f.label :agreed_price %><br>
-    <%= f.text_field :agreed_price %>
-  </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-  <div>
-    <%= f.label :invoicing_foundations %><br>
-    <%= f.text_area :invoicing_foundations %>
-  </div>
-
-  <div>
-    <%= f.label :information_from_CO_ect %><br>
-    <%= f.text_area :information_from_CO_ect %>
-  </div>
-
-  <div>
-    <%= f.label :other_important_particulars %><br>
-    <%= f.text_area :other_important_particulars %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
