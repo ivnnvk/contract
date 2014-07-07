@@ -14,6 +14,7 @@
   <div>
     <%= f.label :type %><br>
     <%= f.collection_select(:source_type_id, @source_types, :id, :name) %>
+    <%= link_to t('new'), new_source_type_path %>
   </div>
 
   <div>

@@ -25,7 +25,6 @@ class SourceTypesController < ApplicationController
   # POST /source_types.json
   def create
     @source_type = SourceType.new(source_type_params)
-
     respond_to do |format|
       if @source_type.save
         format.html { redirect_to @source_type, notice: 'Source type was successfully created.' }
@@ -54,11 +53,18 @@ class SourceTypesController < ApplicationController
   # DELETE /source_types/1
   # DELETE /source_types/1.json
   def destroy
-    @source_type.destroy
-    respond_to do |format|
-      format.html { redirect_to source_types_url, notice: 'Source type was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    if !@source_type.sources.any?
+      @source_type.destroy
+      respond_to do |format|
+        format.html { redirect_to source_types_url, notice: 'Source type was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to source_type_url, notice: 'Source type has sources, yet. Destroy the sources before.' }
+        format.json { render json: @source_type.errors, status: :unprocessable_entity }
+      end
+    end  
   end
 
   private
