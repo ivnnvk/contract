@@ -24,21 +24,22 @@
   <div>
     <%= f.label :source %><br>
     <%= f.collection_select(:source_id, @sources, :id, :description) %>
+    <%= link_to t('new'), new_source_path %>
   </div>
 
   <div>
     <%= f.label :from %><br>
-    <%= f.text_field :from %>
+    <%= f.text_field :from, :value => Time.now %>
   </div>
 
   <div>
     <%= f.label :to %><br>
-    <%= f.text_field :to %>
+    <%= f.text_field :to, :value => Time.now %>
   </div>
 
   <div>
     <%= f.label :unit_number %><br>
-    <%= f.text_field :unit_number %>
+    <%= f.text_field :unit_number, :value => "km" %>
   </div>
 
   <div>

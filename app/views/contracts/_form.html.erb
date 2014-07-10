@@ -39,7 +39,7 @@
             <%= f.label :acceptance_date %>
         </td>
         <td>
-            <%= f.text_field :acceptance_date %>
+            <%= f.text_field :acceptance_date, :value => Time.now %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
@@ -47,6 +47,7 @@
         </td>
         <td>
             <%= f.collection_select(:cadastral_office_id, @cadastral_offices, :id, :name) %>
+            <%= link_to t('new'), new_cadastral_office_path %>
         </td>
       </tr>
       <tr>
@@ -62,6 +63,7 @@
         </td>
         <td>
             <%= f.collection_select(:township_id, @townships, :id, :name) %>
+            <%= link_to t('new'), new_township_path %>
         </td>
       </tr>
       <tr>
@@ -104,6 +106,7 @@
         </td>
         <td>
             <%= f.collection_select(:customer_id, @customers, :id, :name) %>
+            <%= link_to t('new'), new_customer_path %>
         </td>
       </tr>
       <tr>
@@ -127,6 +130,7 @@
         </td>
         <td>
             <%= f.collection_select(:order_way_id, @order_ways, :id, :name) %>
+            <%= link_to t('new'), new_order_way_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
@@ -134,6 +138,7 @@
         </td>
         <td>
             <%= f.collection_select(:order_type_id, @order_types, :id, :name) %>
+            <%= link_to t('new'), new_order_type_path %>
         </td>
       </tr>
       <tr>
@@ -142,6 +147,7 @@
         </td>
         <td>
             <%= f.collection_select(:bend_id, @employees, :id, :name) %>
+            <%= link_to t('new'), new_employee_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
@@ -157,6 +163,7 @@
         </td>
         <td>
             <%= f.collection_select(:drawed_up_id, @employees, :id, :name) %>
+            <%= link_to t('new'), new_employee_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
@@ -180,6 +187,7 @@
         </td>
         <td>
             <%= f.collection_select(:checked_id, @employees, :id, :name) %>
+            <%= link_to t('new'), new_employee_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
@@ -217,6 +225,7 @@
         </td>
         <td>
             <%= f.collection_select(:screened_id, @employees, :id, :name) %>
+            <%= link_to t('new'), new_employee_path %>
         </td>
       </tr>
       <tr>
@@ -233,6 +242,7 @@
         </td>
         <td>
             <%= f.collection_select(:price_creation_id, @price_creations, :id, :name) %>
+            <%= link_to t('new'), new_price_creation_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
@@ -263,6 +273,7 @@
         </td>
         <td>
             <%= f.collection_select(:handover_way_id, @handover_ways, :id, :name) %>
+            <%= link_to t('new'), new_handover_way_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>

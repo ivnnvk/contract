@@ -23,12 +23,12 @@
 
   <div>
     <%= f.label :from %><br>
-    <%= f.text_field :from %>
+    <%= f.text_field :from, :value => Time.now %>
   </div>
 
   <div>
     <%= f.label :to %><br>
-    <%= f.text_field :to %>
+    <%= f.text_field :to, :value => Time.now %>
   </div>
 
   <div class="actions">
