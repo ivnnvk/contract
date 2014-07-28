@@ -1,5 +1,33 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Showing employee</h1>
+  <div>
+    <%=t :user_name %><br>
+    <%= @employee.user_name %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%=t :name %><br>
+    <%= @employee.name %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%=t :hour_rate %><br>
+    <%= @employee.hour_rate %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <%= link_to 'Home', root_path %>
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
 <%= link_to 'List', employees_path %>

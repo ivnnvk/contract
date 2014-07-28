@@ -1,5 +1,42 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Showing customer</h1>
+  <div>
+    <%=t :name %><br>
+    <%= @customer.name %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%=t :place %><br>
+    <%= @customer.place %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%=t :representant %><br>
+    <%= @customer.representant %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%=t :phone %><br>
+    <%= @customer.phone %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <%= link_to 'Home', root_path %>
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'List', customers_path %>

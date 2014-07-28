@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Showing cadastral_office</h1>
+  <div>
+    <%=t :name %><br>
+    <%= @cadastral_office.name %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <%= link_to 'Home', root_path %>
 <%= link_to 'Edit', edit_cadastral_office_path(@cadastral_office) %> |
 <%= link_to 'List', cadastral_offices_path %>

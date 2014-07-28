@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Showing handover_way</h1>
+  <div>
+    <%=t :name %><br>
+    <%= @handover_way.name %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <%= link_to 'Home', root_path %>
 <%= link_to 'Edit', edit_handover_way_path(@handover_way) %> |
 <%= link_to 'List', handover_ways_path %>
