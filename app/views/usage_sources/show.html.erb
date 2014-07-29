@@ -1,5 +1,69 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Showing usage_source</h1>
+  <div>
+    <%=t :reported_by %><br>
+    <%= @employee.name %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+ <div>
+    <%=t :contract %><br>
+    <%= @contract.contract_number %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%=t :source %><br>
+    <%= @source.description %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%=t :from %><br>
+    <%= @usage_source.from %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%=t :to %><br>
+    <%= @usage_source.to %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%=t :unit_number %><br>
+    <%= @usage_source.unit_number %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%=t :amount %><br>
+    <%= @usage_source.amount %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <%= link_to 'Home', root_path %>
 <%= link_to 'Edit', edit_usage_source_path(@usage_source) %> |
 <%= link_to 'List', usage_sources_path %>

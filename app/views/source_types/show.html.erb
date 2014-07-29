@@ -1,6 +1,14 @@
 <p id="notice"><%= notice %></p>
-<p> <%= @source_type.name %> </p>
 
+<h1>Showing source_type</h1>
+  <div>
+    <%=t :name %><br>
+    <%= @source_type.name %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
 
 <%= link_to 'Home', root_path %>
 <%= link_to 'Edit', edit_source_type_path(@source_type) %>

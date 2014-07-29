@@ -11,6 +11,9 @@ class UsageSourcesController < ApplicationController
   # GET /usage_sources/1
   # GET /usage_sources/1.json
   def show
+      @employee = Employee.find(@usage_source.employee_id)
+      @contract = Contract.find(@usage_source.contract_id)
+      @source = Source.find(@usage_source.source_id)
   end
 
   # GET /usage_sources/new
@@ -18,12 +21,16 @@ class UsageSourcesController < ApplicationController
     @usage_source = UsageSource.new
     @employees = Employee.all
     @contracts = Contract.all
+    @from = Time.now
+    @to = Time.now
   end
 
   # GET /usage_sources/1/edit
   def edit
     @employees = Employee.all
     @contracts = Contract.all
+    @from = @usage_source.from
+    @to = @usage_source.to
   end
 
   # POST /usage_sources

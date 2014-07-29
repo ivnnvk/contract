@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Showing order_way</h1>
+  <div>
+    <%=t :name %><br>
+    <%= @order_way.name %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <%= link_to 'Home', root_path %>
 <%= link_to 'Edit', edit_order_way_path(@order_way) %> |
 <%= link_to 'List', order_ways_path %>

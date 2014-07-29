@@ -1,5 +1,42 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Showing source</h1>
+  <div>
+    <%=t :type %><br>
+    <%= @source_type.name %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%=t :description %><br>
+    <%= @source.description %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%=t :unit %><br>
+    <%= @source.unit %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%=t :unit_price %><br>
+    <%= @source.unit_price %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <%= link_to 'Home', root_path %>
 <%= link_to 'Edit', edit_source_path(@source) %> |
 <%= link_to 'List', sources_path %>

@@ -10,6 +10,8 @@ class WorkDiariesController < ApplicationController
   # GET /work_diaries/1
   # GET /work_diaries/1.json
   def show
+    @employee = Employee.find(@work_diary.employee_id)
+    @contract = Contract.find(@work_diary.contract_id)
   end
 
   # GET /work_diaries/new
@@ -17,12 +19,16 @@ class WorkDiariesController < ApplicationController
     @work_diary = WorkDiary.new
     @employees = Employee.all
     @contracts = Contract.all
+    @from = Time.now
+    @to = Time.now
   end
 
   # GET /work_diaries/1/edit
   def edit
     @employees = Employee.all
     @contracts = Contract.all
+    @from = @work_diary.from
+    @to = @work_diary.to
   end
 
   # POST /work_diaries

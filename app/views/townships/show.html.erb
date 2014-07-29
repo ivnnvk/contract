@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Showing township</h1>
+  <div>
+    <%=t :name %><br>
+    <%= @township.name %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <%= link_to 'Home', root_path %>
 <%= link_to 'Edit', edit_township_path(@township) %> |
 <%= link_to 'List', townships_path %>

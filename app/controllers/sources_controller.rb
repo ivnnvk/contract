@@ -16,6 +16,7 @@ class SourcesController < ApplicationController
   # GET /sources/1
   # GET /sources/1.json
   def show
+    @source_type = SourceType.find(@source.source_type_id)
   end
 
   # GET /sources/new

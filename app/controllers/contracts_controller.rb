@@ -35,6 +35,7 @@ class ContractsController < ApplicationController
     @price_creations = PriceCreation.all
     @customers = Customer.all
     @employees = Employee.all
+    @acceptance_date = Time.now
   end
 
   # GET /contracts/1/edit
@@ -47,6 +48,7 @@ class ContractsController < ApplicationController
     @price_creations = PriceCreation.all
     @customers = Customer.all
     @employees = Employee.all
+    @acceptance_date = @contract.acceptance_date
   end
 
   # POST /contracts

@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Showing price_creation</h1>
+  <div>
+    <%=t :name %><br>
+    <%= @price_creation.name %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <%= link_to 'Home', root_path %>
 <%= link_to 'Edit', edit_price_creation_path(@price_creation) %> |
 <%= link_to 'List', price_creations_path %>
