@@ -23,11 +23,13 @@ class SourcesController < ApplicationController
   def new
     @source = Source.new
     @source_types = SourceType.all
+    @submit_value = "Create"
   end
 
   # GET /sources/1/edit
   def edit
     @source_types = SourceType.all
+    @submit_value = "Update"
   end
 
   # POST /sources

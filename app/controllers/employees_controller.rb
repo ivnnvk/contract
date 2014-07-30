@@ -15,12 +15,14 @@ class EmployeesController < ApplicationController
   # GET /employees/new
   def new
     @employee = Employee.new
-    @user_name_default = "@gmail.com"
+    @user_name = "@gmail.com"
+    @hour_rate = 500
   end
 
   # GET /employees/1/edit
   def edit
-    @user_name_default = @employee.user_name
+    @user_name = @employee.user_name
+    @hour_rate = @employee.hour_rate
   end
 
   # POST /employees

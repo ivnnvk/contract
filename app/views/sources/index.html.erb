@@ -1,4 +1,4 @@
-<h1><%=t :listing_sources %></h1>
+<h1><%=t :Listing %>&nbsp;<%=t :sources %></h1>
 
 <table>
   <thead>
@@ -9,10 +9,10 @@
 
   <tbody>
     <tr>
-      <td><%=t :type %></td>
-      <td><%=t :description %></td>
-      <td><%=t :unit %></td>
-      <td><%=t :unit_price %></td>
+      <td><%=t :Type %></td>
+      <td><%=t :Description %></td>
+      <td><%=t :Unit %></td>
+      <td><%=t :Unit_price %></td>
     </tr>
     <% @sources.each do |source| %>
       <tr>
@@ -30,5 +30,5 @@
 
 <br>
 
-<%= link_to 'Home', root_path %>
-<%= link_to t('new'), new_source_path %>
+<%= link_to t('Home'), root_path %>
+<%= link_to t('New'), new_source_path %>

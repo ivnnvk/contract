@@ -13,7 +13,7 @@
 
   <div>
     <%= f.label :user_name %><br>
-    <%= f.text_field :user_name, :value => @user_name_default %>
+    <%= f.text_field :user_name, :value => @user_name %>
   </div>
 
   <div>
@@ -23,7 +23,7 @@
 
   <div>
     <%= f.label :hour_rate %><br>
-    <%= f.text_field :hour_rate, :value => 500  %>
+    <%= f.text_field :hour_rate, :value => @hour_rate  %>
   </div>
 
   <div class="actions">

@@ -20,12 +20,20 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 cs:
-  type: "Typ"
-  description: "Popis"
-  unit: "Jednotka"
-  unit_price: "Cena za jednotku"
+  Type: "Typ"
+  Description: "Popis"
+  Unit: "Jednotka"
+  Unit_price: "Cena za jednotku"
   Show: "Zobrazit"
   Edit: "Editovat"
   Destroy: "Smazat"
-  listing_sources: "Přehled prostředků"
-  new_source: "Nový prostředek"
+  Listing: "Přehled"
+  sources: "prostředků"
+  New: "Nový"
+  source: "prostředek"
+  Source: "Prostředek"
+  Home: "Úvod"
+  List: "Seznam"
+  Create: "Vytvořit"
+  Update: "Změnit"
+  
