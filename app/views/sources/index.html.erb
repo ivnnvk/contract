@@ -1,34 +1,26 @@
-<h1><%=t :Listing %>&nbsp;<%=t :sources %></h1>
+<h2><%=t :Listing %>&nbsp;<%=t :sources %></h2>
 
-<table>
-  <thead>
+<table cellspacing=15>
+  <tr>
+    <td><%=t :Type %></td>
+    <td><%=t :Description %></td>
+    <td><%=t :Unit %></td>
+    <td><%=t :Unit_price %></td>
+  </tr>
+  <% @sources.each do |source| %>
     <tr>
-      <th colspan="3"></th>
+      <td><%= source.source_type.name %></td>
+      <td><%= source.description %></td>
+      <td><%= source.unit %></td>
+      <td><%= source.unit_price %></td>
+      <td><%= link_to t('Show'), source %></td>
+      <td><%= link_to t('Edit'), edit_source_path(source) %></td>
+      <td><%= link_to t('Destroy'), source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td><%=t :Type %></td>
-      <td><%=t :Description %></td>
-      <td><%=t :Unit %></td>
-      <td><%=t :Unit_price %></td>
-    </tr>
-    <% @sources.each do |source| %>
-      <tr>
-        <td><%= source.source_type.name %></td>
-        <td><%= source.description %></td>
-        <td><%= source.unit %></td>
-        <td><%= source.unit_price %></td>
-        <td><%= link_to t('Show'), source %></td>
-        <td><%= link_to t('Edit'), edit_source_path(source) %></td>
-        <td><%= link_to t('Destroy'), source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% end %>
 </table>
 
 <br>
 
-<%= link_to t('Home'), root_path %>
-<%= link_to t('New'), new_source_path %>
+&nbsp;&nbsp;&nbsp;<%= link_to t('Home'), root_path %>
+&nbsp;&nbsp;&nbsp;<%= link_to t('New'), new_source_path %>

@@ -1,7 +1,7 @@
-<h1>Editing source</h1>
+<h2><%=t :Editing %>&nbsp;<%=t :source_u %></h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'Show', @source %>
-<%= link_to 'List', sources_path %>
+<%= link_to t('Home'), root_path %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('Show'), @source %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('List'), sources_path %>

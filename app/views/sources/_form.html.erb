@@ -18,8 +18,16 @@
   </div>
 
   <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
     <%= f.label t(:Description) %><br>
     <%= f.text_area :description %>
+  </div>
+
+  <div>
+    &nbsp;<br>
   </div>
 
   <div>
@@ -28,11 +36,24 @@
   </div>
 
   <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
     <%= f.label t(:Unit_price) %><br>
     <%= f.text_field :unit_price %>
+  </div>
+
+  <div>
+    &nbsp;<br>
   </div>
 
   <div class="actions">
     <%= submit_tag t(@submit_value) %>
   </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <% end %>

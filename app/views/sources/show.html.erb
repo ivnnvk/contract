@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Showing source</h1>
+<h2><%=t :Showing %>&nbsp;<%=t :source_u %></h2>
+
   <div>
-    <%=t :type %><br>
+    <%=t :Type %><br>
     <%= @source_type.name %>
   </div>
 
@@ -11,7 +12,7 @@
   </div>
 
   <div>
-    <%=t :description %><br>
+    <%=t :Description %><br>
     <%= @source.description %>
   </div>
 
@@ -20,7 +21,7 @@
   </div>
 
   <div>
-    <%=t :unit %><br>
+    <%=t :Unit %><br>
     <%= @source.unit %>
   </div>
 
@@ -29,7 +30,7 @@
   </div>
 
   <div>
-    <%=t :unit_price %><br>
+    <%=t :Unit_price %><br>
     <%= @source.unit_price %>
   </div>
 
@@ -37,6 +38,6 @@
     &nbsp;<br>
   </div>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'Edit', edit_source_path(@source) %>
-<%= link_to 'List', sources_path %>
+<%= link_to t('Home'), root_path %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('Edit'), edit_source_path(@source) %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('List'), sources_path %>

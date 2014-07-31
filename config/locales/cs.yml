@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 cs:
+# sources:
   Type: "Typ"
   Description: "Popis"
   Unit: "Jednotka"
@@ -32,8 +33,16 @@ cs:
   New: "Nový"
   source: "prostředek"
   Source: "Prostředek"
+  source_u: "prostředku"
   Home: "Úvod"
   List: "Seznam"
   Create: "Vytvořit"
   Update: "Změnit"
+  Editing: "Úprava"
+  Showing: "Zobrazení"
+# welcome:
+  Contracts: "Zakázky"
+  Contract: "Zakázka"
+  Work: "Pracovní"
+  diary: "diář"
   
