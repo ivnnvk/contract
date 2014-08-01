@@ -6,7 +6,7 @@
 		<%=t :Contract %>:
 	  </td>
 	  <td>
-	  	<%= link_to t('New'), new_contract_path %>
+	  	<%= link_to t('New_a'), new_contract_path %>
 	  </td>
 	  <td>
 	  	<%= link_to t('List'), contracts_path %>
@@ -24,80 +24,110 @@
 	</tr>
 	<tr>
 	  <td>
-		<%= t('employee') %>:
+		<%=t :Employee %>:
 	  </td>
 	  <td>
-	  	<%= link_to t('new'), new_employee_path %> <%= link_to t('list'), employees_path %>
+	  	<%= link_to t('New'), new_employee_path %>
+	  </td>
+	  <td>
+	  	<%= link_to t('List'), employees_path %>
 	  </td>
 	  <td>&nbsp;&nbsp;&nbsp;</td>
 	  <td>
-		<%= t('usage_source') %>:
+		<%=t :Usage %> <%=t :source_u %>:
 	  </td>
 	  <td>
-	  	<%= link_to t('new'), new_usage_source_path %> <%= link_to t('list'), usage_sources_path %>
-	  </td>
-	</tr>
-	<tr>
-	  <td>
-		<%= t('customer') %>:
+	  	<%= link_to t('New'), new_usage_source_path %>
 	  </td>
 	  <td>
-	  	<%= link_to t('new'), new_customer_path %> <%= link_to t('list'), customers_path %>
+	  	<%= link_to t('List'), usage_sources_path %>
 	  </td>
 	</tr>
 	<tr>
 	  <td>
-		<%= t('source_type') %>:
+		<%=t :Customer %>:
 	  </td>
 	  <td>
-	  	<%= link_to t('new'), new_source_type_path %> <%= link_to t('list'), source_types_path %>
-	  </td>
-	</tr>
-	<tr>
-	  <td>
-		<%= t('Source') %>:
+	  	<%= link_to t('New'), new_customer_path %>
 	  </td>
 	  <td>
-	  	<%= link_to t('new'), new_source_path %> <%= link_to t('list'), sources_path %>
+	  	<%= link_to t('List'), customers_path %>
 	  </td>
 	</tr>
 	<tr>
 	  <td>
-		<%= t('township') %>:
+		<%=t :Type %> <%=t :source_u %>:
+	  </td>
 	  <td>
-	  	<%= link_to t('new'), new_township_path %> <%= link_to t('list'), townships_path %>
+	  	<%= link_to t('New'), new_source_type_path %>
+	  </td>
+	  <td>
+	  	<%= link_to t('List'), source_types_path %>
 	  </td>
 	</tr>
 	<tr>
 	  <td>
-		<%= t('cadastral_office') %>:
+		<%=t :Source %>:
 	  </td>
 	  <td>
-	  	<%= link_to t('new'), new_cadastral_office_path %> <%= link_to t('list'), cadastral_offices_path %>
-	  </td>
-	</tr>
-	<tr>
-	  <td>
-		<%= t('handover_way') %>:
+	  	<%= link_to t('New'), new_source_path %>
 	  </td>
 	  <td>
-	  	<%= link_to t('new'), new_handover_way_path %> <%= link_to t('list'), handover_ways_path %>
+	  	<%= link_to t('List'), sources_path %>
 	  </td>
 	</tr>
 	<tr>
 	  <td>
-		<%= t('invoice') %>:
+		<%=t :Township %>:
+	  <td>
+	  	<%= link_to t('New_a'), new_township_path %>
 	  </td>
 	  <td>
-	  	<%= link_to t('new'), new_invoice_path %> <%= link_to t('list'), invoices_path %>
+	  	<%= link_to t('List'), townships_path %>
 	  </td>
 	</tr>
 	<tr>
 	  <td>
-		<%= t('order_type') %>:
+		<%=t :Cadastral %> <%=t :Office %>:
 	  </td>
 	  <td>
-	  	<%= link_to t('new'), new_order_type_path %> <%= link_to t('list'), order_types_path %>
+	  	<%= link_to t('New'), new_cadastral_office_path %>
+	  </td>
+	  <td>
+	  	<%= link_to t('List'), cadastral_offices_path %>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+		<%=t :Handover_way %>:
+	  </td>
+	  <td>
+	  	<%= link_to t('New'), new_handover_way_path %>
+	  </td>
+	  <td>
+	  	<%= link_to t('List'), handover_ways_path %>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+		<%=t :Invoice %>:
+	  </td>
+	  <td>
+	  	<%= link_to t('New_a'), new_invoice_path %>
+	  </td>
+	  <td>
+	  	<%= link_to t('List'), invoices_path %>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+		<%=t :Type %> <%=t :order_y %>:
+	  </td>
+	  <td>
+	  	<%= link_to t('New'), new_order_type_path %>
+	  </td>
+	  <td>
+	  	<%= link_to t('List'), order_types_path %>
 	  </td>
 	</tr>
 	<tr>
