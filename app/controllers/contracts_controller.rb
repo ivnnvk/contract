@@ -36,6 +36,7 @@ class ContractsController < ApplicationController
     @customers = Customer.all
     @employees = Employee.all
     @acceptance_date = Time.now
+    @submit_value = "Create"
   end
 
   # GET /contracts/1/edit
@@ -49,6 +50,7 @@ class ContractsController < ApplicationController
     @customers = Customer.all
     @employees = Employee.all
     @acceptance_date = @contract.acceptance_date
+    @submit_value = "Update"
   end
 
   # POST /contracts

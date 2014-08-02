@@ -121,7 +121,7 @@
 	</tr>
 	<tr>
 	  <td>
-		<%=t :Type %> <%=t :order_y %>:
+		<%=t :Order_type %>:
 	  </td>
 	  <td>
 	  	<%= link_to t('New'), new_order_type_path %>
@@ -132,18 +132,24 @@
 	</tr>
 	<tr>
 	  <td>
-		<%= t('order_way') %>:
+		<%=t :Order_way %>:
 	  </td>
 	  <td>
-	  	<%= link_to t('new'), new_order_way_path %> <%= link_to t('list'), order_ways_path %>
+	  	<%= link_to t('New'), new_order_way_path %>
+	  </td>
+	  <td>
+	  	<%= link_to t('List'), order_ways_path %>
 	  </td>
 	</tr>
 	<tr>
 	  <td>
-		<%= t('price_creation') %>:
+		<%=t :Price_creation %>:
 	  </td>
 	  <td>
-	  	<%= link_to t('new'), new_price_creation_path %> <%= link_to t('list'), price_creations_path %>
+	  	<%= link_to t('New_a'), new_price_creation_path %>
+	  </td>
+	  <td>
+	  	<%= link_to t('List'), price_creations_path %>
 	  </td>
 	</tr>
 </table>

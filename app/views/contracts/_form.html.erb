@@ -12,23 +12,16 @@
   <% end %>
 
     <table>
-      <thead>
-        <tr>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-
-      <tbody>
       <tr>
         <td>
-            <%= f.label :contract_number %>
+            <%= f.label t(:Contract_number) %>
         </td>
         <td>
             <%= f.text_field :contract_number %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :record_number %>
+            <%= f.label t(:Record_number) %>
         </td>
         <td>
             <%= f.text_field :record_number %>
@@ -36,47 +29,47 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :acceptance_date %>
+            <%= f.label t(:Acceptance_date) %>
         </td>
         <td>
             <%= f.text_field :acceptance_date, :value => @acceptance_date %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :cadastral_office %>
+            <%= f.label t(:Cadastral) %>&nbsp;<%= f.label t(:office) %>
         </td>
         <td>
             <%= f.collection_select(:cadastral_office_id, @cadastral_offices, :id, :name) %>
-            <%= link_to t('new'), new_cadastral_office_path %>
+            <%= link_to t('New'), new_cadastral_office_path %>
         </td>
       </tr>
       <tr>
         <td>
-            <%= f.label :fulfilment_term %>
+            <%= f.label t(:Fulfilment_term) %>
         </td>
         <td>
             <%= f.text_field :fulfilment_term %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :township %>
+            <%= f.label t(:Township) %>
         </td>
         <td>
             <%= f.collection_select(:township_id, @townships, :id, :name) %>
-            <%= link_to t('new'), new_township_path %>
+            <%= link_to t('New_a'), new_township_path %>
         </td>
       </tr>
       <tr>
         <td>
-            <%= f.label :responsible %>
+            <%= f.label t(:Responsible) %>
         </td>
         <td>
             <%= f.collection_select(:responsible_id, @employees, :id, :name) %>
-            <%= link_to t('new'), new_employee_path %>
+            <%= link_to t('New'), new_employee_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :cadastral_territory %>
+            <%= f.label t(:Cadastral) %>&nbsp;<%= f.label t(:territory) %>
         </td>
         <td>
             <%= f.text_field :cadastral_territory %>
@@ -89,7 +82,7 @@
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :regarding_plat_numbers %>
+            <%= f.label t(:Regarding_plat_numbers) %>
         </td>
         <td>
             <%= f.text_field :regarding_plat_numbers %>
@@ -97,7 +90,7 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :contract_description %>
+            <%= f.label t(:Contract_description) %>
         </td>
         <td>
             <%= f.text_area :contract_description %>
@@ -105,15 +98,15 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :customer %>
+            <%= f.label t(:Customer) %>
         </td>
         <td>
             <%= f.collection_select(:customer_id, @customers, :id, :name) %>
-            <%= link_to t('new'), new_customer_path %>
+            <%= link_to t('New'), new_customer_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :order_number %>
+            <%= f.label t(:Order_number) %>
         </td>
         <td>
             <%= f.text_field :order_number %>
@@ -121,14 +114,14 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :ordered_by %>
+            <%= f.label t(:Ordered_by) %>
         </td>
         <td>
             <%= f.text_field :ordered_by %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :order_phone %>
+            <%= f.label t(:Order_phone) %>
         </td>
         <td>
             <%= f.text_field :order_phone %>
@@ -136,32 +129,32 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :order_way %><br>
+            <%= f.label t(:Order_way) %><br>
         </td>
         <td>
             <%= f.collection_select(:order_way_id, @order_ways, :id, :name) %>
-            <%= link_to t('new'), new_order_way_path %>
+            <%= link_to t('New'), new_order_way_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :order_type %><br>
+            <%= f.label t(:Order_type) %><br>
         </td>
         <td>
             <%= f.collection_select(:order_type_id, @order_types, :id, :name) %>
-            <%= link_to t('new'), new_order_type_path %>
+            <%= link_to t('New'), new_order_type_path %>
         </td>
       </tr>
       <tr>
         <td>
-            <%= f.label :bend %><br>
+            <%= f.label t(:Bend) %><br>
         </td>
         <td>
             <%= f.collection_select(:bend_id, @employees, :id, :name) %>
-            <%= link_to t('new'), new_employee_path %>
+            <%= link_to t('New'), new_employee_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :bend_date %><br>
+            <%= f.label t(:Bend_date) %><br>
         </td>
         <td>
             <%= f.text_field :bend_date %>
@@ -169,15 +162,15 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :drawed_up %><br>
+            <%= f.label t(:Drawed_up) %><br>
         </td>
         <td>
             <%= f.collection_select(:drawed_up_id, @employees, :id, :name) %>
-            <%= link_to t('new'), new_employee_path %>
+            <%= link_to t('New'), new_employee_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :make_out_date %><br>
+            <%= f.label t(:Make_out_date) %><br>
         </td>
         <td>
             <%= f.text_field :make_out_date %>
@@ -185,7 +178,7 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :sketch_number %><br>
+            <%= f.label t(:Sketch_number) %><br>
         </td>
         <td>
             <%= f.text_field :sketch_number %>
@@ -193,15 +186,15 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :checked %><br>
+            <%= f.label t(:Checked) %><br>
         </td>
         <td>
             <%= f.collection_select(:checked_id, @employees, :id, :name) %>
-            <%= link_to t('new'), new_employee_path %>
+            <%= link_to t('New'), new_employee_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :check_date %><br>
+            <%= f.label t(:Check_date) %><br>
         </td>
         <td>
             <%= f.text_field :check_date %>
@@ -209,14 +202,14 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :information_from_CO_ect %><br>
+            <%= f.label t(:Information_from_CO_ect) %><br>
         </td>
         <td>
             <%= f.text_area :information_from_CO_ect %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :other_important_particulars %><br>
+            <%= f.label t(:Other_important_particulars) %><br>
         </td>
         <td>
             <%= f.text_area :other_important_particulars %>
@@ -224,23 +217,23 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :screened_date %><br>
+            <%= f.label t(:Screened_date) %><br>
         </td>
         <td>
             <%= f.text_field :screened_date %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :screened %><br>
+            <%= f.label t(:Screened) %><br>
         </td>
         <td>
             <%= f.collection_select(:screened_id, @employees, :id, :name) %>
-            <%= link_to t('new'), new_employee_path %>
+            <%= link_to t('New'), new_employee_path %>
         </td>
       </tr>
       <tr>
         <td>
-            <%= f.label :unfulfill_reason %><br>
+            <%= f.label t(:Unfulfill_reason) %><br>
         </td>
         <td>
             <%= f.text_area :unfulfill_reason %>
@@ -248,15 +241,15 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :price_creation %><br>
+            <%= f.label t(:Price_creation) %><br>
         </td>
         <td>
             <%= f.collection_select(:price_creation_id, @price_creations, :id, :name) %>
-            <%= link_to t('new'), new_price_creation_path %>
+            <%= link_to t('New_a'), new_price_creation_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :price_creation_specification %><br>
+            <%= f.label t(:Price_creation_specification) %><br>
         </td>
         <td>
             <%= f.text_area :price_creation_specification %>
@@ -264,14 +257,14 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :invoicing_foundations %><br>
+            <%= f.label t(:Invoicing_foundations) %><br>
         </td>
         <td>
             <%= f.text_area :invoicing_foundations %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :agreed_price %><br>
+            <%= f.label t(:Agreed_price) %><br>
         </td>
         <td>
             <%= f.text_field :agreed_price %>
@@ -279,15 +272,15 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :handover_way %><br>
+            <%= f.label t(:Handover_way) %><br>
         </td>
         <td>
             <%= f.collection_select(:handover_way_id, @handover_ways, :id, :name) %>
-            <%= link_to t('new'), new_handover_way_path %>
+            <%= link_to t('New'), new_handover_way_path %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-            <%= f.label :handover_date %><br>
+            <%= f.label t(:Handover_date) %><br>
         </td>
         <td>
             <%= f.text_field :handover_date %>
@@ -295,7 +288,7 @@
       </tr>
       <tr>
         <td>
-            <%= f.label :deliver_address %><br>
+            <%= f.label t(:Deliver_address) %><br>
         </td>
         <td>
             <%= f.text_area :deliver_address %>
@@ -305,11 +298,13 @@
         </td>
         <td>
           <div class="actions">
-            <%= f.submit %>
+            <%= submit_tag t(@submit_value) %>
           </div>
         </td>
       </tr>
-      </tbody>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
     </table>
 <% end %>
 
