@@ -15,7 +15,7 @@
       <td><%= source.unit_price %></td>
       <td><%= link_to t('Show'), source %></td>
       <td><%= link_to t('Edit'), edit_source_path(source) %></td>
-      <td><%= link_to t('Destroy'), source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to t('Destroy'), source, method: :delete, data: { confirm: t("Are_you_sure?") } %></td>
     </tr>
   <% end %>
 </table>

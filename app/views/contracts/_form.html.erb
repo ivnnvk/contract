@@ -17,14 +17,14 @@
             <%= f.label t :Contract_number %>
         </td>
         <td>
-            <%= f.text_field :contract_number, disabled: @disabled %>
+            <%= f.text_field :contract_number %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
             <%= f.label t(:Record_number) %>
         </td>
         <td>
-            <%= f.text_field :record_number, disabled: @disabled %>
+            <%= f.text_field :record_number %>
         </td>
       </tr>
       <tr>
@@ -32,7 +32,7 @@
             <%= f.label t(:Acceptance_date) %>
         </td>
         <td>
-            <%= f.text_field :acceptance_date, :value => @acceptance_date, disabled: @disabled %>
+            <%= f.text_field :acceptance_date, :value => @acceptance_date %>
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>

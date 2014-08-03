@@ -21,7 +21,6 @@ class ContractsController < ApplicationController
     @acceptance_date = @contract.acceptance_date
     @submit_value = "Show"
     @hidden_submit = "hidden"
-    @disabled = true
   end
 
   # GET /contracts/new
@@ -38,7 +37,6 @@ class ContractsController < ApplicationController
     @acceptance_date = Time.now
     @submit_value = "Create"
     @hidden_submit = ""
-    @disabled = false
   end
 
   # GET /contracts/1/edit
@@ -54,7 +52,6 @@ class ContractsController < ApplicationController
     @acceptance_date = @contract.acceptance_date
     @submit_value = "Update"
     @hidden_submit = ""
-    @disabled = false
   end
 
   # POST /contracts
