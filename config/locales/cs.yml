@@ -102,3 +102,10 @@ cs:
   employee_e: "zaměstnance"
   employee: "zaměstnanec"
   employees: "zaměstnanců"
+# customer:
+  Place: "Sídlo"
+  Representant: "Zástupce"
+  Phone: "Telefon"
+  customer_a: "zákazníka"
+  customers_u: "zákazníků"
+  customer: "zákazník"

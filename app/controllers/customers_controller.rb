@@ -10,15 +10,21 @@ class CustomersController < ApplicationController
   # GET /customers/1
   # GET /customers/1.json
   def show
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
   end
 
   # GET /customers/new
   def new
     @customer = Customer.new
+    @submit_value = "Create"
+    @hidden_submit = ""
   end
 
   # GET /customers/1/edit
   def edit
+    @submit_value = "Update"
+    @hidden_submit = ""
   end
 
   # POST /customers

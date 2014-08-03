@@ -12,26 +12,51 @@
   <% end %>
 
   <div>
-    <%= f.label :name %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Name) %><br>
     <%= f.text_field :name %>
   </div>
 
   <div>
-    <%= f.label :place %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Place) %><br>
     <%= f.text_area :place %>
   </div>
 
   <div>
-    <%= f.label :representant %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Representant) %><br>
     <%= f.text_field :representant %>
   </div>
 
   <div>
-    <%= f.label :phone %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Phone) %><br>
     <%= f.text_field :phone %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div>
+    &nbsp;<br>
   </div>
+
+  <div class="actions" <%= @hidden_submit %> >
+    <%= submit_tag t(@submit_value) %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <% end %>

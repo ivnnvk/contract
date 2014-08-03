@@ -1,7 +1,7 @@
-<h1>Editing customer</h1>
+<h2><%=t :Editing %>&nbsp;<%=t :customer_a %></h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'Show', @customer %> |
-<%= link_to 'List', customers_path %>
+<%= link_to t('Home'), root_path %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('Show'), @customer %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('List'), customers_path %>

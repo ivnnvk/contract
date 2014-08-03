@@ -1,42 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Showing customer</h1>
-  <div>
-    <%=t :name %><br>
-    <%= @customer.name %>
-  </div>
+<h2><%=t :Showing %>&nbsp;<%=t :customer_a %></h2>
 
-  <div>
-    &nbsp;<br>
-  </div>
+<%= render 'form' %>
 
-  <div>
-    <%=t :place %><br>
-    <%= @customer.place %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :representant %><br>
-    <%= @customer.representant %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :phone %><br>
-    <%= @customer.phone %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-<%= link_to 'Home', root_path %>
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'List', customers_path %>
+<%= link_to t('Home'), root_path %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('Edit'), edit_customer_path(@customer) %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('List'), customers_path %>
