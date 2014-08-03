@@ -2,41 +2,7 @@
 
 <h2><%=t :Showing %>&nbsp;<%=t :source_u %></h2>
 
-  <div>
-    <%=t :Type %><br>
-    <%= @source_type.name %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :Description %><br>
-    <%= @source.description %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :Unit %><br>
-    <%= @source.unit %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :Unit_price %><br>
-    <%= @source.unit_price %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
+<%= render 'form' %>
 
 <%= link_to t('Home'), root_path %>&nbsp;&nbsp;&nbsp;
 <%= link_to t('Edit'), edit_source_path(@source) %>&nbsp;&nbsp;&nbsp;

@@ -10,6 +10,10 @@ class EmployeesController < ApplicationController
   # GET /employees/1
   # GET /employees/1.json
   def show
+    @user_name = @employee.user_name
+    @hour_rate = @employee.hour_rate
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
   end
 
   # GET /employees/new
@@ -17,12 +21,16 @@ class EmployeesController < ApplicationController
     @employee = Employee.new
     @user_name = "@gmail.com"
     @hour_rate = 500
+    @submit_value = "Create"
+    @hidden_submit = ""
   end
 
   # GET /employees/1/edit
   def edit
     @user_name = @employee.user_name
     @hour_rate = @employee.hour_rate
+    @submit_value = "Update"
+    @hidden_submit = ""
   end
 
   # POST /employees

@@ -12,21 +12,38 @@
   <% end %>
 
   <div>
-    <%= f.label :user_name %><br>
+    <%= f.label t(:User_name) %><br>
     <%= f.text_field :user_name, :value => @user_name %>
   </div>
 
   <div>
-    <%= f.label :name %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Name) %><br>
     <%= f.text_field :name %>
   </div>
 
   <div>
-    <%= f.label :hour_rate %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Hour_rate) %><br>
     <%= f.text_field :hour_rate, :value => @hour_rate  %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div>
+    &nbsp;<br>
   </div>
+
+  <div class="actions" <%= @hidden_submit %> >
+    <%= submit_tag t(@submit_value) %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <% end %>

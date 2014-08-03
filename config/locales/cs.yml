@@ -92,7 +92,13 @@ cs:
   Handover_way: "Způsob předání"
   Handover_date: "Datum předání"
   Deliver_address: "Adresa pro předání"
-  Are_you_sure?: "Jste si jistý(á)"
+  Are_you_sure?: "Jste si jistý(á)?"
   contracts: "zakázek"
   contract: "zakázka"
-
+# employee:
+  User_name: "Uživatelské jméno"
+  Name: "Jméno"
+  Hour_rate: "Hodinová sazba"
+  employee_e: "zaměstnance"
+  employee: "zaměstnanec"
+  employees: "zaměstnanců"

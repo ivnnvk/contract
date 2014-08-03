@@ -16,7 +16,9 @@ class SourcesController < ApplicationController
   # GET /sources/1
   # GET /sources/1.json
   def show
-    @source_type = SourceType.find(@source.source_type_id)
+    @source_types = SourceType.all
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
   end
 
   # GET /sources/new
@@ -24,12 +26,14 @@ class SourcesController < ApplicationController
     @source = Source.new
     @source_types = SourceType.all
     @submit_value = "Create"
+    @hidden_submit = ""
   end
 
   # GET /sources/1/edit
   def edit
     @source_types = SourceType.all
     @submit_value = "Update"
+    @hidden_submit = ""
   end
 
   # POST /sources

@@ -14,7 +14,9 @@
   <div>
     <%= f.label t(:Type) %><br>
     <%= f.collection_select(:source_type_id, @source_types, :id, :name) %>
-    <%= link_to t('New'), new_source_type_path %>
+    <span <%= @hidden_submit %> >
+      <%= link_to t('New'), new_source_type_path %>
+    </span>
   </div>
 
   <div>
@@ -48,7 +50,7 @@
     &nbsp;<br>
   </div>
 
-  <div class="actions">
+  <div class="actions" <%= @hidden_submit %>>
     <%= submit_tag t(@submit_value) %>
   </div>
 
