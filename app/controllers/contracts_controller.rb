@@ -10,18 +10,18 @@ class ContractsController < ApplicationController
   # GET /contracts/1
   # GET /contracts/1.json
   def show
-    @cadastral_office = CadastralOffice.find(@contract.cadastral_office_id)
-    @township = Township.find(@contract.township_id)
-    @customer = Customer.find(@contract.customer_id)
-    @order_way = OrderWay.find(@contract.order_way_id)
-    @order_type = OrderType.find(@contract.order_type_id)
-    @employee_bend = Employee.find(@contract.bend_id)
-    @employee_drawed_up = Employee.find(@contract.drawed_up_id)
-    @employee_checked = Employee.find(@contract.checked_id)
-    @employee_screened = Employee.find(@contract.screened_id)
-    @employee_responsible = Employee.find(@contract.responsible_id)
-    @price_creation = PriceCreation.find(@contract.price_creation_id)
-    @handover_way = HandoverWay.find(@contract.handover_way_id)
+    @cadastral_offices = CadastralOffice.all
+    @townships = Township.all
+    @order_ways = OrderWay.all
+    @order_types = OrderType.all
+    @handover_ways = HandoverWay.all
+    @price_creations = PriceCreation.all
+    @customers = Customer.all
+    @employees = Employee.all
+    @acceptance_date = @contract.acceptance_date
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
+    @disabled = true
   end
 
   # GET /contracts/new
@@ -37,6 +37,8 @@ class ContractsController < ApplicationController
     @employees = Employee.all
     @acceptance_date = Time.now
     @submit_value = "Create"
+    @hidden_submit = ""
+    @disabled = false
   end
 
   # GET /contracts/1/edit
@@ -51,6 +53,8 @@ class ContractsController < ApplicationController
     @employees = Employee.all
     @acceptance_date = @contract.acceptance_date
     @submit_value = "Update"
+    @hidden_submit = ""
+    @disabled = false
   end
 
   # POST /contracts
