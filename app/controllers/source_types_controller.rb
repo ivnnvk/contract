@@ -10,15 +10,21 @@ class SourceTypesController < ApplicationController
   # GET /source_types/1
   # GET /source_types/1.json
   def show
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
   end
 
   # GET /source_types/new
   def new
     @source_type = SourceType.new
+    @submit_value = "Create"
+    @hidden_submit = ""
   end
 
   # GET /source_types/1/edit
   def edit
+    @submit_value = "Update"
+    @hidden_submit = ""
   end
 
   # POST /source_types

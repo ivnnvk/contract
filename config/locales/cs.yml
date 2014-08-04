@@ -109,3 +109,8 @@ cs:
   customer_a: "zákazníka"
   customers_u: "zákazníků"
   customer: "zákazník"
+# source_type:
+  source_type_u: "typu prostředku"
+  source_type: "typ prostředku"
+  Source_List: "Seznam prostředků"
+  source_types: "typů prostředků"

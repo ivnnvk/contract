@@ -12,11 +12,24 @@
   <% end %>
 
   <div>
-    <%= f.label :name %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Name) %><br>
     <%= f.text_field :name %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div>
+    &nbsp;<br>
   </div>
+
+  <div class="actions" <%= @hidden_submit %> >
+    <%= submit_tag t(@submit_value) %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <% end %>

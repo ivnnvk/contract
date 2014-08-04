@@ -1,28 +1,20 @@
-<h1>Listing source_types</h1>
+<h2><%=t :Listing %>&nbsp;<%=t :source_types %></h2>
 
-<table>
-  <thead>
+<table cellspacing=15 >
+  <tr>
+    <td><%=t 'Name' %></td>
+  </tr>
+  <% @source_types.each do |source_type| %>
     <tr>
-      <th colspan="3"></th>
+      <td><%= source_type.name %></td>
+      <td><%= link_to t('Show'), source_type %></td>
+      <td><%= link_to t('Edit'), edit_source_type_path(source_type) %></td>
+      <td><%= link_to t('Destroy'), source_type, method: :delete, data: { confirm: t('Are_you_sure?') } %></td>
     </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td><%=t 'name' %></td>
-    </tr>
-    <% @source_types.each do |source_type| %>
-      <tr>
-        <td><%= source_type.name %></td>
-        <td><%= link_to 'Show', source_type %></td>
-        <td><%= link_to 'Edit', edit_source_type_path(source_type) %></td>
-        <td><%= link_to 'Destroy', source_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
- </tbody>
+  <% end %>
 </table>
 
 <br>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'New', new_source_type_path %>
+&nbsp;&nbsp;&nbsp;<%= link_to t('Home'), root_path %>
+&nbsp;&nbsp;&nbsp;<%= link_to t('New'), new_source_type_path %>
