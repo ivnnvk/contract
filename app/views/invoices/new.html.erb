@@ -1,6 +1,6 @@
-<h1>New invoice</h1>
+<h2><%=t :New_a %>&nbsp;<%=t :invoice %></h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'List', invoices_path %>
+<%= link_to t('Home'), root_path %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('List'), invoices_path %>

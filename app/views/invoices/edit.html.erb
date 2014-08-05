@@ -1,7 +1,7 @@
-<h1>Editing invoice</h1>
+<h2><%=t :Editing %>&nbsp;<%=t :invoice_y %></h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'Show', @invoice %> |
-<%= link_to 'List', invoices_path %>
+<%= link_to t('Home'), root_path %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('Show'), @invoice %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('List'), invoices_path %>

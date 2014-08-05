@@ -1,51 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Showing invoice</h1>
-  <div>
-    <%=t :contract_number %><br>
-    <%= @contract.contract_number %>
-  </div>
+<h2><%=t :Showing %>&nbsp;<%=t :invoice_y %></h2>
 
-  <div>
-    &nbsp;<br>
-  </div>
+<%= render 'form' %>
 
-  <div>
-    <%=t :number %><br>
-    <%= @invoice.number %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :amount %><br>
-    <%= @invoice.amount %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :issue_date %><br>
-    <%= @invoice.issue_date %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :due_date %><br>
-    <%= @invoice.due_date %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-<%= link_to 'Home', root_path %>
-<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
-<%= link_to 'List', invoices_path %>
+<%= link_to t('Home'), root_path %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('Edit'), edit_invoice_path(@invoice) %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('List'), invoices_path %>

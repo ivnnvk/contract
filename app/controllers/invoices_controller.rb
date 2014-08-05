@@ -10,17 +10,24 @@ class InvoicesController < ApplicationController
   # GET /invoices/1
   # GET /invoices/1.json
   def show
-      @contract = Contract.find(@invoice.contract_id)
+    @contracts = Contract.all
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
   end
 
   # GET /invoices/new
   def new
     @invoice = Invoice.new
     @contracts = Contract.all
+    @submit_value = "Create"
+    @hidden_submit = ""
   end
 
   # GET /invoices/1/edit
   def edit
+    @contracts = Contract.all
+    @submit_value = "Update"
+    @hidden_submit = ""
   end
 
   # POST /invoices

@@ -1,34 +1,26 @@
-<h1>Listing invoices</h1>
+<h2><%=t :Listing %>&nbsp;<%=t :invoices_r %></h2>
 
-<table>
-  <thead>
+<table cellspacing=15 >
+  <tr>
+    <td><%=t :Number %></td>
+    <td><%=t :Amount %></td>
+    <td><%=t :Issue_date %></td>
+    <td><%=t :Due_date %></td>
+  </tr>
+  <% @invoices.each do |invoice| %>
     <tr>
-      <th colspan="3"></th>
+      <td><%= invoice.number %></td>
+      <td><%= invoice.amount %></td>
+      <td><%= invoice.issue_date %></td>
+      <td><%= invoice.due_date %></td>
+      <td><%= link_to t('Show'), invoice %></td>
+      <td><%= link_to t('Edit'), edit_invoice_path(invoice) %></td>
+      <td><%= link_to t('Destroy'), invoice, method: :delete, data: { confirm: t('Are_you_sure?') } %></td>
     </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td><%=t :number %></td>
-      <td><%=t :amount %></td>
-      <td><%=t :issue_date %></td>
-      <td><%=t :due_date %></td>
-    </tr>
-    <% @invoices.each do |invoice| %>
-      <tr>
-        <td><%= invoice.number %></td>
-        <td><%= invoice.amount %></td>
-        <td><%= invoice.issue_date %></td>
-        <td><%= invoice.due_date %></td>
-        <td><%= link_to 'Show', invoice %></td>
-        <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
-        <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% end %>
 </table>
 
 <br>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'New', new_invoice_path %>
+&nbsp;&nbsp;&nbsp;<%= link_to t('Home'), root_path %>
+&nbsp;&nbsp;&nbsp;<%= link_to t('New_a'), new_invoice_path %>

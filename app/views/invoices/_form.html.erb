@@ -12,31 +12,60 @@
   <% end %>
 
   <div>
-    <%= f.label :contract %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Contract) %><br>
     <%= f.collection_select(:contract_id, @contracts, :id, :contract_number) %>
   </div>
 
   <div>
-    <%= f.label :number %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Number) %><br>
     <%= f.text_field :number %>
   </div>
 
   <div>
-    <%= f.label :amount %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Amount) %><br>
     <%= f.text_field :amount %>
   </div>
 
   <div>
-    <%= f.label :issue_date %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Issue_date) %><br>
     <%= f.text_field :issue_date %>
   </div>
 
   <div>
-    <%= f.label :due_date %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Due_date) %><br>
     <%= f.text_field :due_date %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div>
+    &nbsp;<br>
   </div>
+
+  <div class="actions" <%= @hidden_submit %> >
+    <%= submit_tag t(@submit_value) %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <% end %>
