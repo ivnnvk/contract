@@ -118,3 +118,7 @@ cs:
   township_e: "obce"
   township: "obec"
   township_i: "obcí"
+# cadastral_office:
+  cadastral_office_u: "katastrálního úřadu"
+  cadastral_office: "katastrální úřad"
+  cadastral_offices: "katastrálních úřadů"

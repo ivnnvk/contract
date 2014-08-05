@@ -1,28 +1,20 @@
-<h1>Listing cadastral_offices</h1>
+<h2><%=t :Listing %>&nbsp;<%=t :cadastral_offices %></h2>
 
-<table>
-  <thead>
+<table cellspacing=15 >
+  <tr>
+    <td><%=t 'name' %></td>
+  </tr>
+  <% @cadastral_offices.each do |cadastral_office| %>
     <tr>
-      <th colspan="3"></th>
+      <td><%= cadastral_office.name %></td>
+      <td><%= link_to t('Show'), cadastral_office %></td>
+      <td><%= link_to t('Edit'), edit_cadastral_office_path(cadastral_office) %></td>
+      <td><%= link_to t('Destroy'), cadastral_office, method: :delete, data: { confirm: t('Are_you_sure?') } %></td>
     </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td><%=t 'name' %></td>
-    </tr>
-    <% @cadastral_offices.each do |cadastral_office| %>
-      <tr>
-        <td><%= cadastral_office.name %></td>
-        <td><%= link_to 'Show', cadastral_office %></td>
-        <td><%= link_to 'Edit', edit_cadastral_office_path(cadastral_office) %></td>
-        <td><%= link_to 'Destroy', cadastral_office, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% end %>
 </table>
 
 <br>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'New', new_cadastral_office_path %>
+&nbsp;&nbsp;&nbsp;<%= link_to t('Home'), root_path %>
+&nbsp;&nbsp;&nbsp;<%= link_to t('New'), new_cadastral_office_path %>

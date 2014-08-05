@@ -10,15 +10,21 @@ class CadastralOfficesController < ApplicationController
   # GET /cadastral_offices/1
   # GET /cadastral_offices/1.json
   def show
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
   end
 
   # GET /cadastral_offices/new
   def new
     @cadastral_office = CadastralOffice.new
+    @submit_value = "Create"
+    @hidden_submit = ""
   end
 
   # GET /cadastral_offices/1/edit
   def edit
+    @submit_value = "Update"
+    @hidden_submit = ""
   end
 
   # POST /cadastral_offices
