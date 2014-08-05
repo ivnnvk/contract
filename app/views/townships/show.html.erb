@@ -1,15 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Showing township</h1>
-  <div>
-    <%=t :name %><br>
-    <%= @township.name %>
-  </div>
+<h2><%=t :Showing %>&nbsp;<%=t :township_e %></h2>
 
-  <div>
-    &nbsp;<br>
-  </div>
+<%= render 'form' %>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'Edit', edit_township_path(@township) %> |
-<%= link_to 'List', townships_path %>
+<%= link_to t('Home'), root_path %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('Edit'), edit_township_path(@township) %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('List'), townships_path %>

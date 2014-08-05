@@ -114,3 +114,7 @@ cs:
   source_type: "typ prostředku"
   Source_List: "Seznam prostředků"
   source_types: "typů prostředků"
+# township:
+  township_e: "obce"
+  township: "obec"
+  township_i: "obcí"

@@ -10,15 +10,21 @@ class TownshipsController < ApplicationController
   # GET /townships/1
   # GET /townships/1.json
   def show
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
   end
 
   # GET /townships/new
   def new
     @township = Township.new
+    @submit_value = "Create"
+    @hidden_submit = ""
   end
 
   # GET /townships/1/edit
   def edit
+    @submit_value = "Update"
+    @hidden_submit = ""
   end
 
   # POST /townships
