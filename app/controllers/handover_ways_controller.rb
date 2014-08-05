@@ -10,15 +10,21 @@ class HandoverWaysController < ApplicationController
   # GET /handover_ways/1
   # GET /handover_ways/1.json
   def show
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
   end
 
   # GET /handover_ways/new
   def new
     @handover_way = HandoverWay.new
+    @submit_value = "Create"
+    @hidden_submit = ""
   end
 
   # GET /handover_ways/1/edit
   def edit
+    @submit_value = "Update"
+    @hidden_submit = ""
   end
 
   # POST /handover_ways

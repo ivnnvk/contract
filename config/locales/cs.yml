@@ -122,3 +122,7 @@ cs:
   cadastral_office_u: "katastrálního úřadu"
   cadastral_office: "katastrální úřad"
   cadastral_offices: "katastrálních úřadů"
+# handover_way:
+  handover_way_u: "způsobu předání"
+  handover_way: "způsob předání"
+  handover_ways_u: "způsobů předání"
