@@ -134,3 +134,7 @@ cs:
   invoice_y: "faktury"
   invoice: "faktura"
   invoices_r: "faktur"
+# order_type:
+  order_type_y: "typu objednávky"
+  order_types_u: "typů objednávek"
+  order_type: "typ objednávky"

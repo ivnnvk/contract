@@ -10,15 +10,21 @@ class OrderTypesController < ApplicationController
   # GET /order_types/1
   # GET /order_types/1.json
   def show
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
   end
 
   # GET /order_types/new
   def new
     @order_type = OrderType.new
+    @submit_value = "Create"
+    @hidden_submit = ""
   end
 
   # GET /order_types/1/edit
   def edit
+    @submit_value = "Update"
+    @hidden_submit = ""
   end
 
   # POST /order_types
