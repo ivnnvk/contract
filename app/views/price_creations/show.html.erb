@@ -1,15 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Showing price_creation</h1>
-  <div>
-    <%=t :name %><br>
-    <%= @price_creation.name %>
-  </div>
+<h2><%=t :Showing %>&nbsp;<%=t :price_creation_y %></h2>
 
-  <div>
-    &nbsp;<br>
-  </div>
+<%= render 'form' %>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'Edit', edit_price_creation_path(@price_creation) %> |
-<%= link_to 'List', price_creations_path %>
+<%= link_to t('Home'), root_path %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('Edit'), edit_price_creation_path(@price_creation) %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('List'), price_creations_path %>

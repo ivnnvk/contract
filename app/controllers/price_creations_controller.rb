@@ -10,15 +10,21 @@ class PriceCreationsController < ApplicationController
   # GET /price_creations/1
   # GET /price_creations/1.json
   def show
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
   end
 
   # GET /price_creations/new
   def new
     @price_creation = PriceCreation.new
+    @submit_value = "Create"
+    @hidden_submit = ""
   end
 
   # GET /price_creations/1/edit
   def edit
+    @submit_value = "Update"
+    @hidden_submit = ""
   end
 
   # POST /price_creations

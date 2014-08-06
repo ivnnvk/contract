@@ -138,3 +138,6 @@ cs:
   order_type_y: "typu objednávky"
   order_types_u: "typů objednávek"
   order_type: "typ objednávky"
+# price_creation:
+  price_creation_y: "tvorby ceny"
+  price_creation: "tvorba ceny"
