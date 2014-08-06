@@ -10,15 +10,21 @@ class OrderWaysController < ApplicationController
   # GET /order_ways/1
   # GET /order_ways/1.json
   def show
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
   end
 
   # GET /order_ways/new
   def new
     @order_way = OrderWay.new
+    @submit_value = "Create"
+    @hidden_submit = ""
   end
 
   # GET /order_ways/1/edit
   def edit
+    @submit_value = "Update"
+    @hidden_submit = ""
   end
 
   # POST /order_ways

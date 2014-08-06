@@ -141,3 +141,7 @@ cs:
 # price_creation:
   price_creation_y: "tvorby ceny"
   price_creation: "tvorba ceny"
+# order_way:
+  order_way_u: "způsobu objednání"
+  order_ways_u: "způsobů objednání"
+  order_way: "způsob objdenání"
