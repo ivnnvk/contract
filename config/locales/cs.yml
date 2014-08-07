@@ -145,3 +145,10 @@ cs:
   order_way_u: "způsobu objednání"
   order_ways_u: "způsobů objednání"
   order_way: "způsob objdenání"
+# work_diary
+  From: "Od"
+  To: "Do"
+  New_y: "Nový"
+  work_diary: "pracovní deník"
+  work_diary_u: "pracovního deníku"
+  work_diaries_u: "pracovních deníků"

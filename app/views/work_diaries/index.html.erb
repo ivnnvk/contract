@@ -1,37 +1,29 @@
-<h1>Listing work_diaries</h1>
+<h2><%=t :Listing %>&nbsp;<%=t :work_diaries_u %></h2>
 
-<table>
-  <thead>
+<table cellspacing=15 >
+  <tr>
+    <td><%=t t('Employee') %></td>
+    <td><%=t t('Contract') %></td>
+    <td><%=t t('From') %></td>
+    <td><%=t t('To') %></td>
+  </tr>
+  <% @work_diaries.each do |work_diary| 
+    @employee = Employee.find(work_diary.employee_id) 
+    @contract = Contract.find(work_diary.contract_id) 
+    %>
     <tr>
-      <th colspan="3"></th>
+      <td><%= @employee.name %></td>
+      <td><%= @contract.contract_number %></td>
+      <td><%= work_diary.from %></td>
+      <td><%= work_diary.to %></td>
+      <td><%= link_to t('Show'), work_diary %></td>
+      <td><%= link_to t('Edit'), edit_work_diary_path(work_diary) %></td>
+      <td><%= link_to t('Destroy'), work_diary, method: :delete, data: { confirm: t('Are_you_sure?') } %></td>
     </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td><%=t 'employee' %></td>
-      <td><%=t 'contract' %></td>
-      <td><%=t 'from' %></td>
-      <td><%=t 'to' %></td>
-    </tr>
-    <% @work_diaries.each do |work_diary| 
-      @employee = Employee.find(work_diary.employee_id) 
-      @contract = Contract.find(work_diary.contract_id) 
-      %>
-      <tr>
-        <td><%= @employee.name %></td>
-        <td><%= @contract.contract_number %></td>
-        <td><%= work_diary.from %></td>
-        <td><%= work_diary.to %></td>
-        <td><%= link_to 'Show', work_diary %></td>
-        <td><%= link_to 'Edit', edit_work_diary_path(work_diary) %></td>
-        <td><%= link_to 'Destroy', work_diary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% end %>
 </table>
 
 <br>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'New', new_work_diary_path %>
+&nbsp;&nbsp;&nbsp;<%= link_to t('Home'), root_path %>
+&nbsp;&nbsp;&nbsp;<%= link_to t('New'), new_work_diary_path %>

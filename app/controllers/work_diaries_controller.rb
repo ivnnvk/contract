@@ -10,8 +10,12 @@ class WorkDiariesController < ApplicationController
   # GET /work_diaries/1
   # GET /work_diaries/1.json
   def show
-    @employee = Employee.find(@work_diary.employee_id)
-    @contract = Contract.find(@work_diary.contract_id)
+    @employees = Employee.all
+    @contracts = Contract.all
+    @from = @work_diary.from
+    @to = @work_diary.to
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
   end
 
   # GET /work_diaries/new
@@ -21,6 +25,8 @@ class WorkDiariesController < ApplicationController
     @contracts = Contract.all
     @from = Time.now
     @to = Time.now
+    @submit_value = "Create"
+    @hidden_submit = ""
   end
 
   # GET /work_diaries/1/edit
@@ -29,6 +35,8 @@ class WorkDiariesController < ApplicationController
     @contracts = Contract.all
     @from = @work_diary.from
     @to = @work_diary.to
+    @submit_value = "Update"
+    @hidden_submit = ""
   end
 
   # POST /work_diaries

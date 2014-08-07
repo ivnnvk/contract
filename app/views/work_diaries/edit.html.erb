@@ -1,7 +1,7 @@
-<h1>Editing work_diary</h1>
+<h2><%=t :Editing %>&nbsp;<%=t :work_diary_u %></h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'Show', @work_diary %> |
-<%= link_to 'List', work_diaries_path %>
+<%= link_to t('Home'), root_path %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('Show'), @work_diary %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('List'), work_diaries_path %>

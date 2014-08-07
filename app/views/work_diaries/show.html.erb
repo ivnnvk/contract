@@ -1,42 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Showing work_diary</h1>
-  <div>
-    <%=t :employee %><br>
-    <%= @employee.name %>
-  </div>
+<h2><%=t :Showing %>&nbsp;<%=t :work_diary_u %></h2>
 
-  <div>
-    &nbsp;<br>
-  </div>
+<%= render 'form' %>
 
- <div>
-    <%=t :contract %><br>
-    <%= @contract.contract_number %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :from %><br>
-    <%= @work_diary.from %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :to %><br>
-    <%= @work_diary.to %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-<%= link_to 'Home', root_path %>
-<%= link_to 'Edit', edit_work_diary_path(@work_diary) %> |
-<%= link_to 'List', work_diaries_path %>
+<%= link_to t('Home'), root_path %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('Edit'), edit_work_diary_path(@work_diary) %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('List'), work_diaries_path %>
