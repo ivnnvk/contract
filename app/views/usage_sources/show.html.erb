@@ -1,69 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Showing usage_source</h1>
-  <div>
-    <%=t :reported_by %><br>
-    <%= @employee.name %>
-  </div>
+<h2><%=t :Showing %>&nbsp;<%=t :usage_source %></h2>
 
-  <div>
-    &nbsp;<br>
-  </div>
+<%= render 'form' %>
 
- <div>
-    <%=t :contract %><br>
-    <%= @contract.contract_number %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :source %><br>
-    <%= @source.description %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :from %><br>
-    <%= @usage_source.from %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :to %><br>
-    <%= @usage_source.to %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :unit_number %><br>
-    <%= @usage_source.unit_number %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-  <div>
-    <%=t :amount %><br>
-    <%= @usage_source.amount %>
-  </div>
-
-  <div>
-    &nbsp;<br>
-  </div>
-
-<%= link_to 'Home', root_path %>
-<%= link_to 'Edit', edit_usage_source_path(@usage_source) %> |
-<%= link_to 'List', usage_sources_path %>
+<%= link_to t('Home'), root_path %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('Edit'), edit_usage_source_path(@usage_source) %>&nbsp;&nbsp;&nbsp;
+<%= link_to t('List'), usage_sources_path %>

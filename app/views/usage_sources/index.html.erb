@@ -1,49 +1,40 @@
-<h1>Listing usage_sources</h1>
+<h2><%=t :Listing %>&nbsp;<%=t :usage_sources %></h2>
 
-<table>
-  <thead>
+<table cellspacing=15 >
+  <tr>
+    <td><%=t t('Reported_by') %></td>
+    <td><%=t t('Contract') %></td>
+    <td><%=t t('Source') %></td>
+    <td><%=t t('From') %></td>
+    <td><%=t t('To') %></td>
+    <td><%=t t('Unit_number') %></td>
+    <td><%=t t('Amount') %></td>
+  </tr>
+  <% @usage_sources.each do |usage_source| 
+    employee = Employee.find(usage_source.employee_id) 
+    contract = Contract.find(usage_source.contract_id) 
+    source = Source.find(usage_source.source_id)
+    appender = ""
+    if source.description != ""
+      appender = ": " + source.description
+    end
+    %>
     <tr>
-      <th colspan="3"></th>
+      <td><%= employee.name %></td>
+      <td><%= contract.contract_number %></td>
+      <td><%= SourceType.find(source.source_type_id).name + appender %></td>
+      <td><%= usage_source.from %></td>
+      <td><%= usage_source.to %></td>
+      <td><%= usage_source.unit_number %></td>
+      <td><%= usage_source.amount %></td>
+      <td><%= link_to t('Show'), usage_source %></td>
+      <td><%= link_to t('Edit'), edit_usage_source_path(usage_source) %></td>
+      <td><%= link_to t('Destroy'), usage_source, method: :delete, data: { confirm: t('Are_you_sure?') } %></td>
     </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td><%=t 'reported_by' %></td>
-      <td><%=t 'contract' %></td>
-      <td><%=t 'source' %></td>
-      <td><%=t 'from' %></td>
-      <td><%=t 'to' %></td>
-      <td><%=t 'unit_number' %></td>
-      <td><%=t 'amount' %></td>
-    </tr>
-    <% @usage_sources.each do |usage_source| 
-      employee = Employee.find(usage_source.employee_id) 
-      contract = Contract.find(usage_source.contract_id) 
-      source = Source.find(usage_source.source_id)
-      appender = ""
-      if source.description != ""
-        appender = ": " + source.description
-      end
- 
-      %>
-      <tr>
-        <td><%= employee.name %></td>
-        <td><%= contract.contract_number %></td>
-        <td><%= SourceType.find(source.source_type_id).name + appender %></td>
-        <td><%= usage_source.from %></td>
-        <td><%= usage_source.to %></td>
-        <td><%= usage_source.unit_number %></td>
-        <td><%= usage_source.amount %></td>
-        <td><%= link_to 'Show', usage_source %></td>
-        <td><%= link_to 'Edit', edit_usage_source_path(usage_source) %></td>
-        <td><%= link_to 'Destroy', usage_source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% end %>
 </table>
 
 <br>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'New', new_usage_source_path %>
+&nbsp;&nbsp;&nbsp;<%= link_to t('Home'), root_path %>
+&nbsp;&nbsp;&nbsp;<%= link_to t('New'), new_usage_source_path %>

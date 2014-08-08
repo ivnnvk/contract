@@ -12,42 +12,81 @@
   <% end %>
 
   <div>
-    <%= f.label :reported_by %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Reported_by) %><br>
     <%= f.collection_select(:employee_id, @employees, :id, :name) %>
   </div>
 
   <div>
-    <%= f.label :contract %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Contract) %><br>
     <%= f.collection_select(:contract_id, @contracts, :id, :contract_number) %>
   </div>
 
   <div>
-    <%= f.label :source %><br>
-    <%= f.collection_select(:source_id, @sources, :id, :description) %>
-    <%= link_to t('new'), new_source_path %>
+    &nbsp;<br>
   </div>
 
   <div>
-    <%= f.label :from %><br>
+    <%= f.label t(:Source) %><br>
+    <%= f.collection_select(:source_id, @sources, :id, :description) %>
+    <span <%= @hidden_submit %> >
+      <%= link_to t('New'), new_source_path %>
+    </span>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:From) %><br>
     <%= f.text_field :from, :value => @from %>
   </div>
 
   <div>
-    <%= f.label :to %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:To) %><br>
     <%= f.text_field :to, :value => @to %>
   </div>
 
   <div>
-    <%= f.label :unit_number %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Unit_number) %><br>
     <%= f.text_field :unit_number %>
   </div>
 
   <div>
-    <%= f.label :amount %><br>
+    &nbsp;<br>
+  </div>
+
+  <div>
+    <%= f.label t(:Amount) %><br>
     <%= f.text_field :amount %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div>
+    &nbsp;<br>
   </div>
+
+  <div class="actions" <%= @hidden_submit %> >
+    <%= submit_tag t(@submit_value) %>
+  </div>
+
+  <div>
+    &nbsp;<br>
+  </div>
+
 <% end %>

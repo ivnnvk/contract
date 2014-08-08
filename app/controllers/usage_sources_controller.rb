@@ -1,6 +1,6 @@
 class UsageSourcesController < ApplicationController
   before_action :set_usage_source, only: [:show, :edit, :update, :destroy]
-  before_action :set_source, only: [:new, :edit]
+  before_action :set_source, only: [:show, :new, :edit]
 
   # GET /usage_sources
   # GET /usage_sources.json
@@ -11,9 +11,12 @@ class UsageSourcesController < ApplicationController
   # GET /usage_sources/1
   # GET /usage_sources/1.json
   def show
-      @employee = Employee.find(@usage_source.employee_id)
-      @contract = Contract.find(@usage_source.contract_id)
-      @source = Source.find(@usage_source.source_id)
+    @employees = Employee.all
+    @contracts = Contract.all
+    @from = @usage_source.from
+    @to = @usage_source.to
+    @submit_value = "Show"
+    @hidden_submit = "hidden"
   end
 
   # GET /usage_sources/new
@@ -23,6 +26,8 @@ class UsageSourcesController < ApplicationController
     @contracts = Contract.all
     @from = Time.now
     @to = Time.now
+    @submit_value = "Create"
+    @hidden_submit = ""
   end
 
   # GET /usage_sources/1/edit
@@ -31,6 +36,8 @@ class UsageSourcesController < ApplicationController
     @contracts = Contract.all
     @from = @usage_source.from
     @to = @usage_source.to
+    @submit_value = "Update"
+    @hidden_submit = ""
   end
 
   # POST /usage_sources

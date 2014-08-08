@@ -152,3 +152,9 @@ cs:
   work_diary: "pracovní deník"
   work_diary_u: "pracovního deníku"
   work_diaries_u: "pracovních deníků"
+# usage_source
+  usage_source: "využití prostředku"
+  usage_sources: "využití prostředků"
+  Reported_by: "Nahlásil"
+  Unit_number: "Počet jednotek"
+  New_e: "Nové"
