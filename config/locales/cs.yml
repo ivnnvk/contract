@@ -152,6 +152,7 @@ cs:
   work_diary: "pracovní deník"
   work_diary_u: "pracovního deníku"
   work_diaries_u: "pracovních deníků"
+  Doing: "Činnost"
 # usage_source
   usage_source: "využití prostředku"
   usage_sources: "využití prostředků"

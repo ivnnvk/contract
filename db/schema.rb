@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140701055504) do
+ActiveRecord::Schema.define(version: 20140809103549) do
 
   create_table "cadastral_offices", force: true do |t|
     t.string   "name"
@@ -165,6 +165,7 @@ ActiveRecord::Schema.define(version: 20140701055504) do
   add_index "usage_sources", ["source_id"], name: "index_usage_sources_on_source_id"
 
   create_table "work_diaries", force: true do |t|
+    t.string   "doing"
     t.datetime "from"
     t.datetime "to"
     t.integer  "employee_id"

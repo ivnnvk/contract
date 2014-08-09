@@ -4,6 +4,7 @@
   <tr>
     <td><%=t t('Employee') %></td>
     <td><%=t t('Contract') %></td>
+    <td><%=t t('Doing') %></td>
     <td><%=t t('From') %></td>
     <td><%=t t('To') %></td>
   </tr>
@@ -14,6 +15,7 @@
     <tr>
       <td><%= @employee.name %></td>
       <td><%= @contract.contract_number %></td>
+      <td><%= work_diary.doing %></td>
       <td><%= work_diary.from %></td>
       <td><%= work_diary.to %></td>
       <td><%= link_to t('Show'), work_diary %></td>

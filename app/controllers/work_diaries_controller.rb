@@ -87,6 +87,6 @@ class WorkDiariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_diary_params
-      params.require(:work_diary).permit(:employee_id, :contract_id, :from, :to)
+      params.require(:work_diary).permit(:employee_id, :contract_id, :doing, :from, :to)
     end
 end

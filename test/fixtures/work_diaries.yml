@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  from: 2014-06-25 08:35:32
-  to: 2014-06-25 08:35:32
+  doing: MyString
+  from: 2014-08-09 12:35:49
+  to: 2014-08-09 12:35:49
   employee_id: 
   contract_id: 
 
 two:
-  from: 2014-06-25 08:35:32
-  to: 2014-06-25 08:35:32
+  doing: MyString
+  from: 2014-08-09 12:35:49
+  to: 2014-08-09 12:35:49
   employee_id: 
   contract_id: 

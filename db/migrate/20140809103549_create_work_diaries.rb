@@ -1,6 +1,7 @@
 class CreateWorkDiaries < ActiveRecord::Migration
   def change
     create_table :work_diaries do |t|
+      t.string :doing
       t.datetime :from
       t.datetime :to
       t.references :employee, index: true

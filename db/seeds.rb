@@ -53,7 +53,7 @@ Contract.create("contract_number"=>"00209087-91/2014", "record_number"=>"0017756
 	"order_type_id"=>2, "handover_way_id"=>2, "price_creation_id"=>1)
 Invoice.create("number"=>"1365/14", "amount"=>15255, "issue_date"=>"Mon, 30 Jun 2014", 
 	"due_date"=>"Tue, 15 Jul 2014", "contract_id"=>1)
-WorkDiary.create("from"=>"Mon, 30 Jun 2014 08:00:00 UTC +00:00", 
+WorkDiary.create("doing"=>"vyměřování a zaměřování","from"=>"Mon, 30 Jun 2014 08:00:00 UTC +00:00", 
 	"to"=>"Mon, 30 Jun 2014 12:00:00 UTC +00:00", "employee_id"=>1, "contract_id"=>1)
 UsageSource.create("from"=>"Mon, 30 Jun 2014 08:00:00 UTC +00:00", 
 	"to"=>"Mon, 30 Jun 2014 12:00:00 UTC +00:00", "unit_number"=>70, "amount"=>nil, 
