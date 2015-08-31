@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140809103549) do
+ActiveRecord::Schema.define(version: 20150818113604) do
 
   create_table "cadastral_offices", force: true do |t|
     t.string   "name"
@@ -47,7 +47,8 @@ ActiveRecord::Schema.define(version: 20140809103549) do
     t.integer  "cadastral_office_id"
     t.integer  "township_id"
     t.integer  "responsible_id"
-    t.integer  "bend_id"
+    t.integer  "bend_1_id"
+    t.integer  "bend_2_id"
     t.integer  "drawed_up_id"
     t.integer  "checked_id"
     t.integer  "screened_id"
@@ -59,7 +60,8 @@ ActiveRecord::Schema.define(version: 20140809103549) do
     t.datetime "updated_at"
   end
 
-  add_index "contracts", ["bend_id"], name: "index_contracts_on_bend_id"
+  add_index "contracts", ["bend_1_id"], name: "index_contracts_on_bend_1_id"
+  add_index "contracts", ["bend_2_id"], name: "index_contracts_on_bend_2_id"
   add_index "contracts", ["cadastral_office_id"], name: "index_contracts_on_cadastral_office_id"
   add_index "contracts", ["checked_id"], name: "index_contracts_on_checked_id"
   add_index "contracts", ["customer_id"], name: "index_contracts_on_customer_id"

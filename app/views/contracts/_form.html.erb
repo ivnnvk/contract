@@ -158,10 +158,10 @@
       </tr>
       <tr>
         <td>
-            <%= f.label t(:Bend) %><br>
+            <%= f.label t(:Bend) %>&nbsp;1:<br>
         </td>
         <td>
-            <%= f.collection_select(:bend_id, @employees, :id, :name) %>
+            <%= f.collection_select(:bend_1_id, @employees, :id, :name) %>
           <span <%= @hidden_submit %> >
             <%= link_to t('New'), new_employee_path %>
            </span>
@@ -173,6 +173,17 @@
         <td>
             <%= f.text_field :bend_date %>
         </td>
+      </tr>
+      <tr>
+        <td>
+            <%= f.label t(:Bend) %>&nbsp;2:<br>
+        </td>
+        <td>
+            <%= f.collection_select(:bend_2_id, @employees, :id, :name) %>
+          <span <%= @hidden_submit %> >
+            <%= link_to t('New'), new_employee_path %>
+           </span>
+       </td>
       </tr>
       <tr>
         <td>

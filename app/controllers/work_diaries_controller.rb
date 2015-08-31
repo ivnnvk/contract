@@ -23,8 +23,8 @@ class WorkDiariesController < ApplicationController
     @work_diary = WorkDiary.new
     @employees = Employee.all
     @contracts = Contract.all
-    @from = Time.now
-    @to = Time.now
+    @from = Time.now()
+    @to = Time.now()
     @submit_value = "Create"
     @hidden_submit = ""
   end
@@ -87,6 +87,6 @@ class WorkDiariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_diary_params
-      params.require(:work_diary).permit(:employee_id, :contract_id, :doing, :from, :to)
+      params.require(:work_diary).permit(:doing, :from, :to, :employee_id, :contract_id)
     end
 end
